@@ -7,5 +7,7 @@
 <link rel="stylesheet" href="css/style_barra_herramientas.css">
 <link rel="stylesheet" href="css/style_vender.css">
 
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<script src="js/script_vender.js"></script>
 <script src="js/script_menu.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

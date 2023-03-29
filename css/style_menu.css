@@ -48,10 +48,10 @@ body{
         color: #F4A261;
     }
 .ocultar{
-    display: none;
+    display: none ;
 }
 .mostrar{
-    display: block;
+    display: block ;
 }
 .ocultar-flex{
     display: none;
