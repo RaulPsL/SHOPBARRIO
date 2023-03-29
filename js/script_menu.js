@@ -1,4 +1,3 @@
-console.log("hola")
 window.onload = function() {
     const myElements = document.getElementsByClassName('menu-content-area');
     const isColored = [];

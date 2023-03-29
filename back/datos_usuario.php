@@ -1,5 +1,5 @@
 <?php
-include_once '../contenido/conection.php';
+include_once dirname(__DIR__) . '/conection.php';
 
 // Declarar la variable global $usuario fuera del bucle while
 global $usuario;

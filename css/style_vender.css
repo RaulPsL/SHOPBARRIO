@@ -1,0 +1,14 @@
+.vender-contenido{
+    display: flex;
+    justify-content: flex-start;
+}
+.vender-productos{
+    flex-basis: 73%;
+}
+.vender-detalle{
+    flex-basis: 27%;
+    min-height: 79vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
