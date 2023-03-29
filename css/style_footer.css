@@ -1,0 +1,11 @@
+.footer{
+    background-color: #8E9FA5;
+    height: 30px;
+    top: -16px;
+    position: relative;
+    text-align: center;
+}
+.footer > p {
+    position: relative;
+    top: 25%;
+}
