@@ -17,9 +17,14 @@ if (mysqli_num_rows($resultado) > 0) {
         echo "<script>console.log('Nombre: " . $fila['STOCK_PRODUCTO'] . "')</script>";
         echo "<script>console.log('Nombre: " . $fila['IMAGEN_PRODUCTO'] . "')</script>";    
         */     
-        $productos[] = $fila;
+        $productos[$fila['ID_PRODUCTO']] = array(
+            'ID_PRODUCTO' => $fila['ID_PRODUCTO'],
+            'NOMBRE_PRODUCTO' => $fila['NOMBRE_PRODUCTO'],
+            'PRECIOV_PRODUCTO' => $fila['PRECIOV_PRODUCTO'],
+            'STOCK_PRODUCTO' => $fila['STOCK_PRODUCTO'],
+            'IMAGEN_PRODUCTO' => $fila['IMAGEN_PRODUCTO']
+        );
     }
-    //echo "<script>console.log('".json_encode($productos)."')</script>";
     echo "<script> var productos = ".json_encode($productos)."; </script>";
 } else {
     echo "<script>console.log('No se encontraron resultados')</script>";
