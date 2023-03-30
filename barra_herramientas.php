@@ -13,7 +13,7 @@ switch ($pagina) {
     case "productos.php":
         ?>
         <div class="barra-herramientas">
-            <label class="venta-historico">Otra cosa></label>
+            <label class="venta-historico">Otra cosa</label>
         </div>
         <?php
         break;
@@ -24,7 +24,7 @@ switch ($pagina) {
         // Código a ejecutar si no se cumple ningún caso anterior
         ?>
         <div class="barra-herramientas">
-            <label>no hay nada></label>
+            <label>no hay nada</label>
         </div>
         <?php
         break;

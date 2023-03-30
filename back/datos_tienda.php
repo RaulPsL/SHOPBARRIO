@@ -1,5 +1,5 @@
 <?php
-include_once '../contenido/conection.php';
+include_once dirname(__DIR__) . '/conection.php';
 
 // Ejecutar una consulta SELECT
 $sql = "SELECT NOMBRE_TIENDA FROM TIENDA WHERE ID_TIENDA = 1";

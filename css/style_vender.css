@@ -1,0 +1,94 @@
+.vender-contenido{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.vender-productos{
+    flex-basis: 73%;
+    margin: 0 40px 0 40px;
+    background-color: #ffffff;
+    min-height: 79vh;
+    align-self: auto;
+    
+}
+.lista-productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-height: 73.9vh;
+    overflow: auto;
+}
+.vender-productos > h1 {
+    display: inline-block;
+    margin: 0 0 0 15px;
+    padding: 14px 26px 14px 26px;
+    background-color: #254653;
+    color: #ffffff;
+}
+.tarjeta-producto{
+    width: 250px;
+    height: 277px;
+    background: #ffffff;
+    border: 2px solid #254653;
+    margin: 0 15px 0 15px;
+}
+.contenedor-imagen{
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+.tarjeta-imagen{
+    width: 250px;
+    height: 250px;
+    transition: transform .2s ease;
+    cursor: pointer;
+}
+.tarjeta-imagen:hover {
+    transform: scale(1.2);
+}
+.tarjeta-datos{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #000000;
+    opacity: 60%;
+    position: relative;
+    top: -18%;
+    height: 50px;
+}
+.tarjeta-datos > div > p {
+    color: #ffffff;
+    position: relative;
+    top: -19%;
+    text-align: center;
+    height: 27px;
+    margin: 0;
+    line-height: 50px;
+}
+.tarjeta-datos > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.tarjeta-producto > p {
+    position: relative;
+    top: -18%;
+    height: 27px;
+    margin: 0;
+    text-align: center;
+    line-height: 27px;
+    z-index: 1;
+}
+.vender-detalle-vacio{
+    flex-basis: 27%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #ffffff;
+    margin-right: 32px;
+    align-self: flex-start;
+}
+.vender-detalle-vacio > p {
+    max-width: 300px;
+}                                                                                   

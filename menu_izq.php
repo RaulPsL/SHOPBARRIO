@@ -1,7 +1,6 @@
 <?php include_once 'back/datos_tienda.php'; ?>
 <div class="menu">
     <div class="menu-title">           
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <lottie-player class="menu-gif" src="https://assets1.lottiefiles.com/packages/lf20_xavpbl2r.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>        
         
         <h1><?php echo $tienda; ?></h1>

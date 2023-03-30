@@ -1,5 +1,5 @@
 <?php
-include_once '../contenido/conection.php';
+include_once dirname(__DIR__) . '/conection.php';
 
 // Ejecutar una consulta SELECT
 $sql = "SELECT SUM(TOTAL_VENTA) AS TOTAL FROM VENTA WHERE ID_TIENDA = 1";
