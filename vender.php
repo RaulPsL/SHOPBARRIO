@@ -20,32 +20,34 @@
                             <div class="lista-productos">
 
                                 <?php 
-                                for($pos=0; $pos<count($productos); $pos++){ ?>
+                                foreach ($productos as $producto) { ?>
                                     <div class="tarjeta-producto">
                                         <div class="contenedor-imagen">
-                                            <img class="tarjeta-imagen" id="producto-<?php echo $productos[$pos]['ID_PRODUCTO']; ?>" src="<?php echo $productos[$pos]['IMAGEN_PRODUCTO']; ?>">
+                                            <img class="tarjeta-imagen" id="producto-<?php echo $producto['ID_PRODUCTO']; ?>" src="<?php echo $producto['IMAGEN_PRODUCTO']; ?>" alt="imagen no encontrada" onerror="this.onerror=null;this.src='src/sinimagen.jpg';">
                                         </div>
                                         <div class="tarjeta-datos">
                                             <div class="tarjeta-precio">
-                                                <img src="src/icon-dolar.svg">
-                                                <p><?php echo $productos[$pos]['PRECIOV_PRODUCTO']; ?> Bs.</p>
+                                                <p><span>Bs. </span><?php echo $producto['PRECIOV_PRODUCTO']; ?></p>
                                             </div>
                                             <div class="tarjeta-stock">
-                                                <img src="src/icon-number.svg">
-                                                <p><?php echo $productos[$pos]['STOCK_PRODUCTO']; ?></p>
+                                                <p><span>Cant. </span><?php echo $producto['STOCK_PRODUCTO']; ?></p>
                                             </div>
                                         </div>                                  
-                                        <p><?php echo $productos[$pos]['NOMBRE_PRODUCTO']; ?></p>
+                                        <p><?php echo $producto['NOMBRE_PRODUCTO']; ?></p>
                                     </div> 
                                 <?php } ?>
 
                             </div>
                         </div>
+                        <!--
                         <div class="vender-detalle-vacio">
                             <h3>Detalle de venta</h3>
                             <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_wd1udlcz.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
                             <p>Presiona sobre cualquier producto para añadirlo a tu detalle de venta</p>
                         </div>
+                        -->
+                        <?php include_once 'detalle_lleno.php'; ?>
+                        
                     </div>
                 </section>
                 <!-- FIN DEL CONTENIDO -->

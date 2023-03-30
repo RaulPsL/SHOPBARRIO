@@ -4,42 +4,35 @@
 }
 
 .vender-productos{
-    flex-basis: 73%;
     margin: 0 40px 0 40px;
     background-color: #ffffff;
-    min-height: 79vh;
-    align-self: auto;
-    
+    flex: 0 1 1079px;
 }
 .lista-productos{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    max-height: 73.9vh;
-    overflow: auto;
 }
 .vender-productos > h1 {
     display: inline-block;
-    margin: 0 0 0 15px;
+    margin:0;
     padding: 14px 26px 14px 26px;
     background-color: #254653;
     color: #ffffff;
 }
 .tarjeta-producto{
-    width: 250px;
-    height: 277px;
+    width: 150px;
+    height: 177px;
     background: #ffffff;
     border: 2px solid #254653;
-    margin: 0 15px 0 15px;
 }
 .contenedor-imagen{
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     overflow: hidden;
 }
 .tarjeta-imagen{
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     transition: transform .2s ease;
     cursor: pointer;
 }
@@ -48,21 +41,20 @@
 }
 .tarjeta-datos{
     display: flex;
-    justify-content: space-evenly;
-    background-color: #000000;
-    opacity: 60%;
+    justify-content: space-between;
+    background-color: #254653;
     position: relative;
-    top: -18%;
-    height: 50px;
+    top: -14%;
+    height: 25px;
+    padding: 0 10px;
 }
 .tarjeta-datos > div > p {
     color: #ffffff;
     position: relative;
-    top: -19%;
     text-align: center;
-    height: 27px;
+    height: 25px;
     margin: 0;
-    line-height: 50px;
+    line-height: 25px;
 }
 .tarjeta-datos > div {
     display: flex;
@@ -71,24 +63,254 @@
 }
 .tarjeta-producto > p {
     position: relative;
-    top: -18%;
+    top: -14%;
     height: 27px;
     margin: 0;
     text-align: center;
     line-height: 27px;
     z-index: 1;
 }
-.vender-detalle-vacio{
-    flex-basis: 27%;
-    min-height: 50vh;
-    display: flex;
+.detalle-gif{
+     display: flex;
     flex-direction: column;
     text-align: center;
-    align-items: center;
     background-color: #ffffff;
-    margin-right: 32px;
+    margin: 50px 50px;
     align-self: flex-start;
+    align-items: center;
 }
 .vender-detalle-vacio > p {
     max-width: 300px;
-}                                                                                   
+}             
+
+
+/*detalle lleno*/
+.vender-detalle-lleno{
+    background-color: #ffffff;
+    margin-right: 32px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 400px;
+}
+
+.titulo-detalle {
+    background-color: #264653;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 13.5px 0;
+}
+.contenedor-items{
+    max-height: 604px;
+    overflow: auto;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #666;
+    padding: 15px 5px;
+    align-items: center;
+    height: 40px;
+}
+.imagen-nombre{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 0 0 200px;
+}
+
+.detalle-item-cantidad::-webkit-inner-spin-button, 
+.detalle-item-cantidad::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.item-detalles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.selector-cantidad {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 50px; 
+}
+.detalle-item-cantidad{
+    max-width: 50px;
+    text-align: center
+}
+.precio-eliminar{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-end;
+    flex: 0 0 128px;
+}
+
+
+.detalle-total {
+    background-color: #f4a261;
+    padding: 15px 30px;
+}
+
+.detalle-total .fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.detalle-total .boton-registrar-venta {
+    display: block;
+    width: 60%;
+    border: none;
+    background: #2a9d8f;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 10px;
+    float: right;
+}
+
+.detalle-total .boton-registrar-venta:hover{
+    scale: 1.05;
+}
+
+.detalle-total .boton-cancelar-registro-venta {
+    display: block;
+    width: 35%;
+    border: none;
+    background: #e76f51;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.detalle-total .boton-cancelar-registro-venta:hover{
+    scale: 1.03;
+}
+.boton-eliminar img{
+    cursor: pointer;
+}
+
+/*
+
+
+.item img {
+    margin-right: 20px;
+}
+
+.item .item-nombre {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.item .detalle-item-cantidad{
+    border: none;
+    font-size: 18px;
+    background: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+/*.item .selector-cantidad {
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    cursor: pointer;
+}
+
+.item .item-precio{
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.item .boton-eliminar {
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    color: red;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    z-index: 20;
+}
+
+.item .boton-eliminar i{
+    pointer-events: none;
+}
+
+
+.detalle-total .fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.detalle-total .boton-registrar-venta {
+    display: block;
+    width: 60%;
+    border: none;
+    background: #2a9d8f;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 10px;
+    float: right;
+    /*display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.detalle-total .boton-registrar-venta:hover{
+    scale: 1.05;
+}
+
+.detalle-total .boton-cancelar-registro-venta {
+    display: block;
+    width: 35%;
+    border: none;
+    background: #e76f51;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 10px;
+    /*display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.detalle-total .boton-cancelar-registro-venta:hover{
+    scale: 1.03;
+}
+*/

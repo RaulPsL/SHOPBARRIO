@@ -23,8 +23,8 @@ switch ($pagina) {
     default:
         // Código a ejecutar si no se cumple ningún caso anterior
         ?>
-        <div class="barra-herramientas">
-            <label>no hay nada</label>
+        <div>
+            
         </div>
         <?php
         break;
