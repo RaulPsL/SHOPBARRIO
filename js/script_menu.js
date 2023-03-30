@@ -53,5 +53,5 @@ function plegar(index){
 }
 
 function abrirPagina(link){
-    window.location.href="https://prueba.shopbarrio.online/contenido/menu_izq.php"
+    window.location.href="https://prueba.shopbarrio.online/contenido/vender.php"
 }

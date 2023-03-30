@@ -1,10 +1,10 @@
 body{
     margin:0;
+    background-color: #F7F7F8;
 }
 .menu{
     background-color: #254653;
-    max-width: 280px;
-    height:100vh;
+    min-height:96.8vh;
 }
 .menu-gif{
     width: 147px; 

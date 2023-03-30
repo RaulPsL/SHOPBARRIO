@@ -11,6 +11,7 @@
             <section class="lado-derecho" name="lado-derecho">
                 <?php include_once 'header.php'; myheader("este es mi titulo");?>
                 <?php include_once 'barra_herramientas.php';?>
+                <!-- AQUIE SE DEBE COLOCAR EL CONTENIDO DE LA PAGINA -->
                 <!-- INICIO DEL CONTENIDO -->
                 <section namse="contenido-pagina">
 
