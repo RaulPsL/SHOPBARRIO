@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.main {
+    background-color: #f7f7f8;
+    padding: 10px;
+    width: 87%;
+}
+aside{
+    background-color: #264653;
+    width: 13%;
+}
+.principal {
+    display: flex;
+}
+
+.titulo ul {
+    margin-bottom: 15px;
+}
+.titulo ul li{
+    display: inline;
+    font-weight: bold;
+    font-size: 30px;
+}
+.titulo input{
+    border-radius: 4px;
+    border: 1px solid;
+    height: 40px;
+    width: 96%;
+    text-align: center;
+}
+.titulo img{
+    background-image: url(https://fontawesome.com/icons/user?f=classic&s=solid);
+    height: 10px;
+    width: 10px;
+}
+.container{
+    display: inline-block;
+    margin-right: 150px;
+}
+.inputButton {
+    margin-bottom: 25px;
+}
+.inputButton label{
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+}
+.inputButton input{
+    border-radius: 4px;
+    border: 1px solid;
+    height: 40px;
+    width: 280px;
+}
+.inputButton img {
+    width: 200px;
+    height: 200px;
+}
+.inputButton .descripcion {
+    width: 900px;
+    height: 150px;
+}
+.botones {
+    display: inline-block;
+}
+button {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 3px;
+    padding: 5px 40px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+footer {
+    font-weight: bold;
+    background-color: #d2d2d2;
+}
