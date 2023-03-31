@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
           //detalleV.classList.add('ocultar');
         });
     }
-     
+
 });
 function pintarArea(){
     let paginaActual = window.location.pathname.split("/").pop();
@@ -39,24 +39,26 @@ function agregarProducto(id){
 
   // Asignar el HTML deseado al contenido del div
   contenedor.insertAdjacentHTML('beforeend', `
-    <div class="item" id="item-${productos[id].ID_PRODUCTO}">
-    <div class="imagen-nombre">
-        <img src="${productos[id].IMAGEN_PRODUCTO}" width="50px" onerror="this.onerror=null;this.src='src/sinimagen.jpg';">
+  <div class="item" id="item-${productos[id].ID_PRODUCTO}">
+
+    <img src="${productos[id].IMAGEN_PRODUCTO}" alt="" width="50px" onerror="this.onerror=null;this.src='src/sinimagen.jpg';">
+
+    <div class="item-detalles">
+
         <span class="item-nombre">${productos[id].NOMBRE_PRODUCTO}</span>
-    </div>
-        
-    <div class="selector-cantidad">
-        
-        <input type="number" value="1" class="detalle-item-cantidad" id="cantidad-${productos[id].ID_PRODUCTO}">
-        
+        <div class="selector-cantidad">
+            <i onclick="reducirEnUno(${productos[id].ID_PRODUCTO})" class="fa-solid fa-minus restar-cantidad"></i>
+            <input type="number" value="1" class="detalle-item-cantidad" id="cantidad-${productos[id].ID_PRODUCTO}">
+            <i onclick="aumentarEnUno(${productos[id].ID_PRODUCTO})" class="fa-solid fa-plus sumar-cantidad"></i>
+        </div>
+
     </div>
 
-    <div class="precio-eliminar">    
-        <strong>Bs. <span class="item-precio" id="precio-${productos[id].ID_PRODUCTO}">${productos[id].PRECIOV_PRODUCTO}</span></strong>
-        <span class="boton-eliminar">
-            <img onclick=eliminar(${productos[id].ID_PRODUCTO}) src="src/icon-delete.svg">
-        </span>
-    </div>  
+    <strong>Bs. <span class="item-precio" id="precio-${productos[id].ID_PRODUCTO}">${productos[id].PRECIOV_PRODUCTO}</span></strong>
+    <span class="boton-eliminar">
+      <img onclick=eliminar(${productos[id].ID_PRODUCTO}) src="src/icon-delete.svg">
+    </span>
+
   </div>
   `)
   var inputsCantidad = document.getElementById('cantidad-'+productos[id].ID_PRODUCTO);
@@ -112,10 +114,7 @@ function actualizarPrecioTotalCantidad(cantidad, id){
 }
 function actualizarPrecioParcial(cantidad, id){
   var precioParcial = document.getElementById('precio-'+id);
-  // Obtener el valor actual
-  //var valorActual = parseInt(precioParcial.textContent)
 
-  // Cambiar el valor
   precioParcial.textContent = cantidad*productos[id].PRECIOV_PRODUCTO;
   precioParcial.textContent = parseFloat(precioParcial.textContent).toFixed(2);
 }
@@ -163,4 +162,67 @@ function ocultargif(){
 }
 function vaciar(){
   
+}
+function reducirEnUno(id){
+  var precioParcial = document.getElementById('precio-'+id);
+  var precioParcialActual = parseFloat(precioParcial.textContent)
+  var inputCantidad = document.getElementById('cantidad-'+productos[id].ID_PRODUCTO);
+
+  if(parseInt(inputCantidad.value)>1){
+    inputCantidad.value=parseInt(inputCantidad.value)-1
+    precioParcial.textContent = parseFloat(precioParcialActual - productos[id].PRECIOV_PRODUCTO).toFixed(1);
+
+    var precioTotal = document.querySelector('.detalle-precio-total');
+    var precioTotalActual = parseFloat(precioTotal.textContent);
+
+    // Actualizar el valor con el nuevo precio
+    precioTotal.textContent = parseFloat(precioTotalActual - productos[id].PRECIOV_PRODUCTO).toFixed(1);
+  }
+}
+
+function aumentarEnUno(id){
+  var precioParcial = document.getElementById('precio-'+id);
+  var precioParcialActual = parseFloat(precioParcial.textContent)
+  var inputCantidad = document.getElementById('cantidad-'+productos[id].ID_PRODUCTO);
+
+  if(parseInt(inputCantidad.value)<productos[id].STOCK_PRODUCTO){
+    inputCantidad.value=parseInt(inputCantidad.value)+1
+    precioParcial.textContent = (precioParcialActual + parseFloat(productos[id].PRECIOV_PRODUCTO)).toFixed(1);
+
+    var precioTotal = document.querySelector('.detalle-precio-total');
+    var precioTotalActual = parseFloat(precioTotal.textContent);
+
+    // Actualizar el valor con el nuevo precio
+    precioTotal.textContent = (precioTotalActual + parseFloat(productos[id].PRECIOV_PRODUCTO)).toFixed(1);
+  }
+}
+ 
+function enviar() {
+  var items = document.getElementsByClassName("item");
+  var elementos = [];
+  if (items.length > 0) {
+    
+    var precioTotal = document.querySelector('.detalle-precio-total');
+    var total = parseFloat(precioTotal.textContent);
+    console.log(total);
+
+    Array.from(items).forEach(function(elemento) {
+      var idElemento = elemento.id.substring(5);
+      var cantidad = document.getElementById("cantidad-"+idElemento).value;
+      var elementoObj = {
+        id: idElemento,
+        cantidad: cantidad
+      };
+      elementos.push(elementoObj);
+    });
+    // Realizar solicitud POST utilizando jQuery
+    $.post("back/envio_venta.php", {
+      elementos: JSON.stringify(elementos),
+      total: total
+    }, function(data) {
+      console.log(data);
+      // Otras acciones a realizar con la respuesta del servidor
+    });
+    location.reload();
+  }
 }
