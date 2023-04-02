@@ -1,23 +1,104 @@
-<div class="vender-detalle-lleno">
-    <div class="titulo-detalle">
-        <span>Detalle de Venta</span>
-    </div>
+<div class="titulo-detalle">
+    <span>Detalle de Venta</span>
+</div>
 
-    <div class="contenedor-items">
-        <!-- con js se agregera acodigo html aqui -->
-    </div>
+<div class="contenedor-items">
 
-    <div class="detalle-gif">
-        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_wd1udlcz.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-        <p>Presiona sobre cualquier producto para añadirlo a tu detalle de venta</p>
-    </div>
+    <div class="item">
 
-    <div class="detalle-total ocultar">
-        <div class="fila">
-            <strong>Total: </strong>
-            <strong>Bs. <span class="detalle-precio-total">0</span></strong>
+        <img src="src/pan.jpg" alt="" width="50px">
+
+        <div class="item-detalles">
+
+            <span class="item-nombre">Pan</span>
+            <div class="selector-cantidad">
+                <i class="fa-solid fa-minus restar-cantidad"></i>
+                <input type="text" value="1" class="detalle-item-cantidad" disabled>
+                <i class="fa-solid fa-plus sumar-cantidad"></i>
+            </div>
+
         </div>
-        <button class="boton-registrar-venta">Registrar Venta</button>
-        <button onclick="vaciar()" class="boton-cancelar-registro-venta">Cancelar</button>
+
+        <span class="item-precio">Bs. 0.50</span>
+        <span class="boton-eliminar">
+            <i class="fa-solid fa-trash-can"></i>
+        </span>
+
     </div>
+
+    <div class="item">
+        <img src="src/pan.jpg" alt="" width="50px">
+        <div class="item-detalles">
+            <span class="item-nombre">Aceite 1L.</span>
+            <div class="selector-cantidad">
+                <i class="fa-solid fa-minus restar-cantidad"></i>
+                <input type="text" value="1" class="detalle-item-cantidad" disabled>
+                <i class="fa-solid fa-plus sumar-cantidad"></i>
+            </div>
+        </div>
+        <span class="item-precio">Bs. 12</span>
+        <span class="boton-eliminar">
+            <i class="fa-solid fa-trash-can"></i>
+        </span>
+
+    </div>
+
+    <div class="item">
+        <img src="src/pan.jpg" alt="" width="50px">
+        <div class="item-detalles">
+            <span class="item-nombre">Coca Cola 3L.</span>
+            <div class="selector-cantidad">
+                <i class="fa-solid fa-minus restar-cantidad"></i>
+                <input type="text" value="1" class="detalle-item-cantidad" disabled>
+                <i class="fa-solid fa-plus sumar-cantidad"></i>
+            </div>
+        </div>
+        <span class="item-precio">Bs. 13</span>
+        <span class="boton-eliminar">
+            <i class="fa-solid fa-trash-can"></i>
+        </span>
+
+    </div>
+
+    <div class="item">
+        <img src="src/pan.jpg" alt="" width="50px">
+        <div class="item-detalles">
+            <span class="item-nombre">Mantequilla</span>
+            <div class="selector-cantidad">
+                <i class="fa-solid fa-minus restar-cantidad"></i>
+                <input type="text" value="1" class="detalle-item-cantidad" disabled>
+                <i class="fa-solid fa-plus sumar-cantidad"></i>
+            </div>
+        </div>
+        <span class="item-precio">Bs. 15</span>
+        <span class="boton-eliminar">
+            <i class="fa-solid fa-trash-can"></i>
+        </span>
+
+    </div>
+
+    <div class="item">
+        <img src="src/pan.jpg" alt="" width="50px">
+        <div class="item-detalles">
+            <span class="item-nombre">Huevo Premium</span>
+            <div class="selector-cantidad">
+                <i class="fa-solid fa-minus restar-cantidad"></i>
+                <input type="text" value="1" class="detalle-item-cantidad" disabled>
+                <i class="fa-solid fa-plus sumar-cantidad"></i>
+            </div>
+        </div>
+        <span class="item-precio">Bs. 999.99</span>
+        <span class="boton-eliminar">
+            <i class="fa-solid fa-trash-can"></i>
+        </span>
+    </div>
+</div>
+
+<div class="detalle-total">
+    <div class="fila">
+        <strong>Total:</strong>
+        <span class="detalle-precio-total">Bs. 41.20</span>
+    </div>
+    <button class="boton-registrar-venta">Registrar Venta</button>
+    <button class="boton-cancelar-registro-venta">Cancelar</button>
 </div>

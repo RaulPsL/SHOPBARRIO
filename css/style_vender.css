@@ -1,268 +1,138 @@
-.vender-contenido{
+.vender-contenido {
     display: flex;
     justify-content: flex-start;
 }
 
-.vender-productos{
-    margin: 0 40px 0 40px;
-    background-color: #ffffff;
-    flex: 0 1 1079px;
+.vender-productos {
+    flex-basis: 70%;
 }
-.lista-productos{
+
+.vender-detalle {
+    flex-basis: 30%;
+    min-height: 79vh;
     display: flex;
-    flex-wrap: wrap;
-}
-.vender-productos > h1 {
-    display: inline-block;
-    margin:0;
-    padding: 14px 26px 14px 26px;
-    background-color: #254653;
-    color: #ffffff;
-}
-.tarjeta-producto{
-    width: 150px;
-    height: 177px;
-    background: #ffffff;
-    border: 2px solid #254653;
-}
-.contenedor-imagen{
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-}
-.tarjeta-imagen{
-    width: 150px;
-    height: 150px;
-    transition: transform .2s ease;
-    cursor: pointer;
-}
-.tarjeta-imagen:hover {
-    transform: scale(1.2);
-}
-.tarjeta-datos{
-    display: flex;
-    justify-content: space-between;
-    background-color: #254653;
-    position: relative;
-    top: -14%;
-    height: 25px;
-    padding: 0 10px;
-}
-.tarjeta-datos > div > p {
-    color: #ffffff;
-    position: relative;
-    text-align: center;
-    height: 25px;
-    margin: 0;
-    line-height: 25px;
-}
-.tarjeta-datos > div {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.tarjeta-producto > p {
-    position: relative;
-    top: -14%;
-    height: 27px;
-    margin: 0;
-    text-align: center;
-    line-height: 27px;
-    z-index: 1;
-}
-.detalle-gif{
-     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: #ffffff;
-    margin: 50px 50px;
-    align-self: flex-start;
-    align-items: center;
-}
-.vender-detalle-vacio > p {
-    max-width: 300px;
-}             
 
+    /*leo-guia*/
+    background-color: white;
+    /*border: 1px solid #666;*/
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: auto;
+    margin-right: 10px;
+    position: sticky !important;
+    top: 0;
+    transition: .3s;
+}
 
 /*detalle lleno*/
-.vender-detalle-lleno{
-    background-color: #ffffff;
-    margin-right: 32px;
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 400px;
+
+* {
+    font-family: "Nunito Sans";
 }
 
-.titulo-detalle {
+.vender-detalle .titulo-detalle {
     background-color: #264653;
     font-size: 20px;
+    font-weight: bold;
     color: white;
     text-align: center;
-    padding: 13.5px 0;
-}
-.contenedor-items{
-    max-height: 604px;
-    overflow: auto;
+    padding: 15px 0;
 }
 
-.item {
+.vender-detalle .item {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: relative;
     border-bottom: 1px solid #666;
-    padding: 15px 5px;
-    align-items: center;
-    height: 40px;
-}
-.imagen-nombre{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    flex: 0 0 200px;
-}
-
-.detalle-item-cantidad::-webkit-inner-spin-button, 
-.detalle-item-cantidad::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.item-detalles{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.selector-cantidad {
-    display: flex;
-    justify-content: center;
-    flex: 0 0 50px; 
-}
-.detalle-item-cantidad{
-    max-width: 50px;
-    text-align: center
-}
-.precio-eliminar{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    justify-content: flex-end;
-    flex: 0 0 128px;
-}
-
-
-.detalle-total {
-    background-color: #f4a261;
-    padding: 15px 30px;
-}
-
-.detalle-total .fila {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.detalle-total .boton-registrar-venta {
-    display: block;
-    width: 60%;
-    border: none;
-    background: #2a9d8f;
-    color: white;
-    border-radius: 10px;
-    font-size: 18px;
-    padding: 10px;
-    float: right;
-}
-
-.detalle-total .boton-registrar-venta:hover{
-    scale: 1.05;
-}
-
-.detalle-total .boton-cancelar-registro-venta {
-    display: block;
-    width: 35%;
-    border: none;
-    background: #e76f51;
-    color: white;
-    border-radius: 10px;
-    font-size: 18px;
     padding: 10px;
 }
 
-.detalle-total .boton-cancelar-registro-venta:hover{
-    scale: 1.03;
-}
-.boton-eliminar img{
-    cursor: pointer;
-}
 
-/*
-
-
-.item img {
-    margin-right: 20px;
+.vender-detalle .item img {
+    display: inline-block;
+    width: 15%;
 }
 
-.item .item-nombre {
+.vender-detalle .item .item-nombre {
     display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-
-.item .detalle-item-cantidad{
-    border: none;
-    font-size: 18px;
-    background: transparent;
-    display: inline-block;
-    width: 30px;
-    padding: 5px;
     text-align: center;
-}
-
-/*.item .selector-cantidad {
-    font-size: 18px;
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid #d9d9d9;
-    cursor: pointer;
-}
-
-.item .item-precio{
+    align-items: center;
     font-weight: bold;
-    display: inline-block;
-    font-size: 18px;
     margin-bottom: 5px;
 }
 
-.item .boton-eliminar {
-    position: absolute;
+.vender-detalle .item .item-detalles {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+
+.vender-detalle .item .selector-cantidad {
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.vender-detalle .item .detalle-item-cantidad {
+    font-size: 18px;
+    background: transparent;
+    display: inline-block;
+    width: 45px;
+    text-align: center;
+
+    border-radius: 5px;
+    border: 1px solid #d9d9d9;
+}
+
+.vender-detalle .item .selector-cantidad {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.vender-detalle .item .item-precio {
+    font-weight: bold;
+    display: inline-block;
+    width: 25%;
+    font-size: 16px;
+    text-align: end;
+    margin-right: 15px;
+}
+
+.vender-detalle .item .boton-eliminar {
+    /*position: absolute;*/
     right: 15px;
     top: 30px;
     color: red;
-    width: 40px;
+    width: 10%;
     height: 40px;
     line-height: 40px;
     text-align: center;
     border-radius: 10px;
     border: 1px solid #d9d9d9;
     cursor: pointer;
-    display: block;
+    display: inline-block;
     background: transparent;
     z-index: 20;
+    transition: .3s;
 }
 
-.item .boton-eliminar i{
+.vender-detalle .item .boton-eliminar:hover {
+    /*scale: 1.05;*/
+    background: red;
+    color: white;
+}
+
+.vender-detalle .item .boton-eliminar i {
     pointer-events: none;
 }
 
+.detalle-total {
+    background-color: #f4a261;
+    padding: 20px;
+}
 
 .detalle-total .fila {
     display: flex;
@@ -283,14 +153,11 @@
     font-size: 18px;
     padding: 10px;
     float: right;
-    /*display: flex;
-    justify-content: space-between;
-    align-items: center;
     cursor: pointer;
     transition: .3s;
 }
 
-.detalle-total .boton-registrar-venta:hover{
+.detalle-total .boton-registrar-venta:hover {
     scale: 1.05;
 }
 
@@ -303,14 +170,10 @@
     border-radius: 10px;
     font-size: 18px;
     padding: 10px;
-    /*display: flex;
-    justify-content: space-between;
-    align-items: center;
     cursor: pointer;
     transition: .3s;
 }
 
-.detalle-total .boton-cancelar-registro-venta:hover{
+.detalle-total .boton-cancelar-registro-venta:hover {
     scale: 1.03;
 }
-*/

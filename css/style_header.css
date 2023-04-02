@@ -1,10 +1,8 @@
 .izquierda-derecha{
     display: flex;
-    min-height: 96.93%;
 }
 .lado-izquierdo{
     flex: 0 1 280px;
-    background-color: #254653;
 }
 .lado-derecho{
     flex: 1;

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+window.onload = function() {
     const myElements = document.getElementsByClassName('menu-content-area');
     const isColored = [];
     let lastColoredIndex;
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         });
     });
-});
+}
 function desplegar(index){
     var iconos = document.getElementsByClassName("icon-area-"+index);
     if(iconos.length > 0){
@@ -52,5 +52,5 @@ function plegar(index){
 }
 
 function abrirPagina(link){
-    window.location.href="https://shopbarrio.online/prueba/vender.php"
+    window.location.href="https://prueba.shopbarrio.online/contenido/vender.php"
 }
