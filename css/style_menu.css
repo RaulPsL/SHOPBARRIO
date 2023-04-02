@@ -1,10 +1,7 @@
 body{
     margin:0;
     background-color: #F7F7F8;
-}
-.menu{
-    background-color: #254653;
-    min-height:96.8vh;
+    font-family: "Nunito Sans";
 }
 .menu-gif{
     width: 147px; 
@@ -48,10 +45,10 @@ body{
         color: #F4A261;
     }
 .ocultar{
-    display: none;
+    display: none !important;
 }
 .mostrar{
-    display: block;
+    display: block ;
 }
 .ocultar-flex{
     display: none;
