@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
       //detalleV.classList.add('ocultar');
     });
   }
-
 });
 function pintarArea() {
   let paginaActual = window.location.pathname.split("/").pop();
@@ -56,8 +55,8 @@ function agregarProducto(id) {
 
     <strong>Bs. <span class="item-precio" id="precio-${productos[id].ID_PRODUCTO}">${productos[id].PRECIOV_PRODUCTO}</span></strong>
     <span onclick=eliminar(${productos[id].ID_PRODUCTO}) class="boton-eliminar">
-      <i  class="fa-solid fa-trash-can"></i>
-    </span>
+    <i  class="fa-solid fa-trash-can"></i>
+  </span>
 
   </div>
   `)
@@ -139,8 +138,6 @@ function aumentarCantidad(id) {
     cantidadInput.value = productos[id].STOCK_PRODUCTO
   }
 }
-//elimina un item id es el id del producto entero
-//incio
 function eliminar(id) {
 
   var precioParcial = document.getElementById('precio-' + id);
@@ -159,31 +156,17 @@ function eliminar(id) {
   elementosClickeados["producto-" + id] = false;
   mostrarGif()
 }
-
-
 function mostrarGif() {
   var items = document.getElementsByClassName("item");
   if (items.length < 1) {
-    document.querySelector(".detalle-gif").classList.remove("ocultar")
-    document.querySelector(".detalle-total").classList.add("ocultar")
+    document.getElementById("detalle-gif-vacio").classList.remove("ocultar")
+    document.getElementById("detalle-total").classList.add("ocultar")
   }
 }
-//fin
-
-
 function ocultargif() {
-  document.querySelector(".detalle-gif").classList.add("ocultar")
-  document.querySelector(".detalle-total").classList.remove("ocultar")
+  document.getElementById("detalle-gif-vacio").classList.add("ocultar")
+  document.getElementById("detalle-total").classList.remove("ocultar")
 }
-
-function vaciar() {
-  var contenedor = document.querySelector(".contenedor-items");
-  contenedor.innerHTML = "";
-  elementosClickeados = {};
-  document.querySelector('.detalle-precio-total').textContent = '0';
-  mostrarGif()
-}
-
 function reducirEnUno(id) {
   var precioParcial = document.getElementById('precio-' + id);
   var precioParcialActual = parseFloat(precioParcial.textContent)
@@ -242,9 +225,20 @@ function enviar() {
       total: total
     }, function (data) {
       console.log(data);
-      location.reload();
-      // Otras acciones a realizar con la respuesta del servidor
+      document.getElementById("modal").showModal()
+      // Recargar la página después de 5 segundos
+      setTimeout(function() {
+        location.reload();
+      }, 2000); // 5000 milisegundos = 5 segundos
+      
     });
 
   }
+}
+function vaciar() {
+  var contenedor = document.querySelector(".contenedor-items");
+  contenedor.innerHTML = "";
+  elementosClickeados = {};
+  document.querySelector('.detalle-precio-total').textContent = '0';
+  mostrarGif()
 }

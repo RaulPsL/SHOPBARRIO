@@ -1,58 +1,47 @@
-* {
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-.vender-contenido {
+.vender-contenido{
     display: flex;
     justify-content: flex-start;
 }
 
-.vender-productos {
+.vender-productos{
     margin: 0 40px 0 40px;
     background-color: #ffffff;
     flex: 0 1 1079px;
 }
-
-.lista-productos {
+.lista-productos{
     display: flex;
     flex-wrap: wrap;
     overflow: auto;
     max-height: 711px;
 }
-
-.vender-productos>h1 {
+.vender-productos > h1 {
     display: inline-block;
-    margin: 0;
+    margin:0;
     padding: 14px 26px 14px 26px;
     background-color: #254653;
     color: #ffffff;
 }
-
-.tarjeta-producto {
+.tarjeta-producto{
     width: 150px;
     height: 177px;
     background: #ffffff;
     border: 2px solid #254653;
 }
-
-.contenedor-imagen {
+.contenedor-imagen{
     width: 150px;
     height: 150px;
     overflow: hidden;
 }
-
-.tarjeta-imagen {
+.tarjeta-imagen{
     width: 150px;
     height: 150px;
     transition: transform .2s ease;
     cursor: pointer;
 }
-
 .tarjeta-imagen:hover {
     transform: scale(1.2);
 }
-
-.tarjeta-datos {
+.tarjeta-datos{
     display: flex;
     justify-content: space-between;
     background-color: #254653;
@@ -61,8 +50,7 @@
     height: 25px;
     padding: 0 10px;
 }
-
-.tarjeta-datos>div>p {
+.tarjeta-datos > div > p {
     color: #ffffff;
     position: relative;
     text-align: center;
@@ -70,14 +58,12 @@
     margin: 0;
     line-height: 25px;
 }
-
-.tarjeta-datos>div {
+.tarjeta-datos > div {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
-.tarjeta-producto>p {
+.tarjeta-producto > p {
     position: relative;
     top: -14%;
     height: 27px;
@@ -86,9 +72,8 @@
     line-height: 27px;
     z-index: 1;
 }
-
-.detalle-gif {
-    display: flex;
+.detalle-gif{
+     display: flex;
     flex-direction: column;
     text-align: center;
     background-color: #ffffff;
@@ -96,16 +81,15 @@
     align-self: flex-start;
     align-items: center;
 }
-
-.vender-detalle-vacio>p {
+.vender-detalle-vacio > p {
     max-width: 300px;
-}
+}             
 
 
 /*detalle lleno*/
 
 
-.vender-detalle-lleno {
+.vender-detalle-lleno{
     background-color: #ffffff;
     margin-right: 32px;
     align-self: flex-start;
@@ -121,18 +105,15 @@
     text-align: center;
     padding: 13.5px 0;
 }
-
-.contenedor-items {
+.contenedor-items{
     max-height: 604px;
     overflow: auto;
 }
-
-.detalle-item-cantidad::-webkit-inner-spin-button,
+.detalle-item-cantidad::-webkit-inner-spin-button, 
 .detalle-item-cantidad::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
-
 .detalle-total {
     background-color: #f4a261;
     padding: 15px 30px;
@@ -147,7 +128,7 @@
     margin-bottom: 10px;
 }
 
-.detalle-total .boton-registrar-venta {
+.boton-registrar-venta {
     display: block;
     width: 150px;
     border: none;
@@ -159,10 +140,9 @@
     float: right;
     cursor: pointer;
     text-align: center;
-    transition: .3s;
 }
 
-.detalle-total .boton-registrar-venta:hover {
+.detalle-total .boton-registrar-venta:hover{
     scale: 1.05;
 }
 
@@ -177,14 +157,12 @@
     padding: 10px;
     cursor: pointer;
     text-align: center;
-    transition: .3s;
 }
 
-.detalle-total .boton-cancelar-registro-venta:hover {
+.detalle-total .boton-cancelar-registro-venta:hover{
     scale: 1.03;
 }
-
-.boton-eliminar img {
+.boton-eliminar img{
     cursor: pointer;
 }
 
@@ -222,7 +200,7 @@
     margin-left: 20px;
 }
 
-.item .detalle-item-cantidad {
+.item .detalle-item-cantidad{
     font-size: 18px;
     background: transparent;
     display: inline-block;
@@ -238,7 +216,7 @@
     cursor: pointer;
 }
 
-.item .item-precio {
+.item .item-precio{
     font-weight: bold;
     display: inline-block;
     width: 25%;
@@ -248,17 +226,17 @@
 }
 
 .item .boton-eliminar {
-    right: 15px;
-    top: 30px;
-    color: red;
-    width: 42px;
-    height: 40px;
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid #d9d9d9;
-    cursor: pointer;
-    background: transparent;
-    transition: .3s;
+       right: 15px;
+       top: 30px;
+       color: red;
+       width: 42px;
+       height: 40px;
+       text-align: center;
+       border-radius: 10px;
+       border: 1px solid #d9d9d9;
+       cursor: pointer;
+       background: transparent;
+       transition: .3s;
 }
 
 .item .boton-eliminar:hover {
@@ -266,7 +244,10 @@
     background: red;
     color: white;
 }
-
-.item .boton-eliminar i {
+.item .boton-eliminar i{
     line-height: 40px;
 }
+.contenido-pagina-dialog{
+    text-align: center;
+}
+
