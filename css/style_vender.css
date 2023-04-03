@@ -6,13 +6,15 @@
 .vender-productos{
     margin: 0 40px 0 40px;
     background-color: #ffffff;
-    flex: 0 1 1079px;
+    flex: 1 1 1079px;
 }
 .lista-productos{
     display: flex;
     flex-wrap: wrap;
+    overflow: auto;
+    max-height: 711px;
 }
-.vender-productos > h1 {
+.vender-productos > h2 {
     display: inline-block;
     margin:0;
     padding: 14px 26px 14px 26px;
@@ -85,6 +87,8 @@
 
 
 /*detalle lleno*/
+
+
 .vender-detalle-lleno{
     background-color: #ffffff;
     margin-right: 32px;
@@ -97,61 +101,19 @@
 .titulo-detalle {
     background-color: #264653;
     font-size: 20px;
-    color: white;
+    color: #ffffff;
     text-align: center;
-    padding: 13.5px 0;
+    height: 51px;
 }
 .contenedor-items{
     max-height: 604px;
     overflow: auto;
 }
-
-.item {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #666;
-    padding: 15px 5px;
-    align-items: center;
-    height: 40px;
-}
-.imagen-nombre{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    flex: 0 0 200px;
-}
-
 .detalle-item-cantidad::-webkit-inner-spin-button, 
 .detalle-item-cantidad::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-.item-detalles{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.selector-cantidad {
-    display: flex;
-    justify-content: center;
-    flex: 0 0 50px; 
-}
-.detalle-item-cantidad{
-    max-width: 50px;
-    text-align: center
-}
-.precio-eliminar{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    justify-content: flex-end;
-    flex: 0 0 128px;
-}
-
-
 .detalle-total {
     background-color: #f4a261;
     padding: 15px 30px;
@@ -166,9 +128,9 @@
     margin-bottom: 10px;
 }
 
-.detalle-total .boton-registrar-venta {
+.boton-registrar-venta {
     display: block;
-    width: 60%;
+    width: 150px;
     border: none;
     background: #2a9d8f;
     color: white;
@@ -176,6 +138,8 @@
     font-size: 18px;
     padding: 10px;
     float: right;
+    cursor: pointer;
+    text-align: center;
 }
 
 .detalle-total .boton-registrar-venta:hover{
@@ -184,13 +148,15 @@
 
 .detalle-total .boton-cancelar-registro-venta {
     display: block;
-    width: 35%;
+    width: 95px;
     border: none;
     background: #e76f51;
     color: white;
     border-radius: 10px;
     font-size: 18px;
     padding: 10px;
+    cursor: pointer;
+    text-align: center;
 }
 
 .detalle-total .boton-cancelar-registro-venta:hover{
@@ -200,117 +166,88 @@
     cursor: pointer;
 }
 
-/*
-
+/*       ITEM         */
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #666;
+    padding: 10px;
+}
 
 .item img {
-    margin-right: 20px;
+    display: inline-block;
 }
 
 .item .item-nombre {
     display: block;
+    text-align: center;
+    align-items: center;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
+.item .item-detalles {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+
+.item .selector-cantidad {
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
 
 .item .detalle-item-cantidad{
-    border: none;
     font-size: 18px;
     background: transparent;
     display: inline-block;
-    width: 30px;
-    padding: 5px;
+    width: 45px;
     text-align: center;
+
+    border-radius: 5px;
+    border: 1px solid #d9d9d9;
 }
 
-/*.item .selector-cantidad {
+.item .selector-cantidad {
     font-size: 18px;
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid #d9d9d9;
     cursor: pointer;
 }
 
 .item .item-precio{
     font-weight: bold;
     display: inline-block;
-    font-size: 18px;
-    margin-bottom: 5px;
+    width: 25%;
+    font-size: 16px;
+    text-align: end;
+    margin-right: 15px;
 }
 
 .item .boton-eliminar {
-    position: absolute;
-    right: 15px;
-    top: 30px;
-    color: red;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid #d9d9d9;
-    cursor: pointer;
-    display: block;
-    background: transparent;
-    z-index: 20;
+       right: 15px;
+       top: 30px;
+       color: red;
+       width: 42px;
+       height: 40px;
+       text-align: center;
+       border-radius: 10px;
+       border: 1px solid #d9d9d9;
+       cursor: pointer;
+       background: transparent;
+       transition: .3s;
 }
 
+.item .boton-eliminar:hover {
+    /*scale: 1.05;*/
+    background: red;
+    color: white;
+}
 .item .boton-eliminar i{
-    pointer-events: none;
+    line-height: 40px;
+}
+.contenido-pagina-dialog{
+    text-align: center;
 }
 
-
-.detalle-total .fila {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.detalle-total .boton-registrar-venta {
-    display: block;
-    width: 60%;
-    border: none;
-    background: #2a9d8f;
-    color: white;
-    border-radius: 10px;
-    font-size: 18px;
-    padding: 10px;
-    float: right;
-    /*display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.detalle-total .boton-registrar-venta:hover{
-    scale: 1.05;
-}
-
-.detalle-total .boton-cancelar-registro-venta {
-    display: block;
-    width: 35%;
-    border: none;
-    background: #e76f51;
-    color: white;
-    border-radius: 10px;
-    font-size: 18px;
-    padding: 10px;
-    /*display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.detalle-total .boton-cancelar-registro-venta:hover{
-    scale: 1.03;
-}
-*/
