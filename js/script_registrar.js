@@ -22,12 +22,7 @@ const setSuccess = element => {
     errorDisplay.innerText = '';
     inputControl.classList.add('error');
 }
-function countDecimals(value) {
-    if (Math.floor(value) === value) {
-      return 0;
-    }
-    return value.toString().split(".")[1].length || 0;
-  }  
+
 
 const validateInputs = () => {
     event.preventDefault();
@@ -49,77 +44,112 @@ const validateInputs = () => {
     let res = true;
 
     if(nombreproductoValue === ''){
-        setError(nombreproducto, 'Campo obligatorio');
+        setError(nombreproducto, '*Campo obligatorio');
         res = false;
     }else if(nombreproductoValue.length<4){
-        setError(nombreproducto, 'El campo debe tener más de 3 caracteres y solo alfabéticos');
+        setError(nombreproducto, '*El campo debe tener más de 3 caracteres y solo alfabéticos');
         res = false;
     }else if(regex.test(nombreproductoValue)){
-        setError(nombreproducto, 'El campo debe tener más de 3 caracteres y solo alfabéticos');
+        setError(nombreproducto, '*El campo debe tener más de 3 caracteres y solo alfabéticos');
         res = false;
     }else{
         setSuccess(nombreproducto);
     }
-    if(ventaValue === ''){
-        setError(venta, 'Campo obligatorio');
+    ///// validacion venta
+    if (ventaValue === '') {
+        setError(venta, '*Campo obligatorio');
         res = false;
-    }else if(ventaValue < 0){
-        setError(venta, 'El campo no puede ser negativo');
+      } else if (ventaValue < 0) {
+        setError(venta, '*El campo no puede ser negativo');
         res = false;
-    }
-    else if (ventaValue > 999.99) {
-        setError(venta, 'El campo debe tener solo 2 decimales y menor a 1000');
+      } else {
+        let ventaValue = parseFloat(venta.value);
+        // Redondear el número a 1 decimal utilizando toFixed()
+        const roundedValue = parseFloat(ventaValue.toFixed(1));
+      
+        if (roundedValue !== ventaValue) {
+          // Si el número original tiene más de 1 decimal, mostrar el mensaje de error
+          setError(venta, '*El campo debe tener solo 1 decimal');
+          res = false;
+        } else if (roundedValue > 999.9 || isNaN(roundedValue)) {
+          setError(venta, '*El campo debe ser menor a 1000 y tener solo 1 decimal');
+          res = false;
+        } else {
+          setSuccess(venta);
+        }
+      }
+      
+    ///// validacion compra
+    if (compraValue === '') {
+        setError(compra, '*Campo obligatorio');
         res = false;
-      } else if (countDecimals(ventaValue) > 2) {
-        setError(venta, 'El campo debe tener solo 2 decimales y menor a 1000');
+      } else if (compraValue < 0) {
+        setError(compra, '*El campo no puede ser negativo');
         res = false;
-      }else{
-        setSuccess(venta);
-    }
-    if(compraValue === ''){
-        setError(compra, 'Campo obligatorio');
-        res = false;
-    }else if(compraValue < 0){
-        setError(compra, 'El campo no puede ser negativo');
-        res = false;
-    }
-    else if (compraValue > 999.99) {
-        setError(compra, 'El campo debe tener solo 2 decimales y menor a 1000');
-        res = false;
-      } else if (countDecimals(compraValue) > 2) {
-        setError(compra, 'El campo debe tener solo 2 decimales y menor a 1000');
-        res = false;
-      }else{
-        setSuccess(compra);
-    }
+      } else {
+        let compraValue = parseFloat(compra.value);
+        // Redondear el número a 1 decimal utilizando toFixed()
+        const roundedValue = parseFloat(compraValue.toFixed(1));
+      
+        if (roundedValue !== compraValue) {
+          // Si el número original tiene más de 1 decimal, mostrar el mensaje de error
+          setError(compra, '*El campo debe tener solo 1 decimal');
+          res = false;
+        } else if (roundedValue > 999.9 || isNaN(roundedValue)) {
+          setError(compra, '*El campo debe ser menor a 1000 y tener solo 1 decimal');
+          res = false;
+        } else {
+          setSuccess(compra);
+        }
+      }
+    //// validacion fecha
     if (inputDate < today) {
-        setError(fecha, 'No puede ingresar productos caducados');
+        setError(fecha, '*No puede ingresar productos caducados');
         res = false;
     }else{
         setSuccess(fecha);
     }
+    //// validacion categoria
     if(categoriaValue === ''){
-        setError(categoria, 'Campo obligatorio');
+        setError(categoria, '*Campo obligatorio');
         res = false;
-    }else{
+    }
+    else{
         setSuccess(categoria);
     }
-    if(cantidadValue === ''){
-        setError(cantidad, 'Campo obligatorio');
-        res = false;
-    }else{
-        setSuccess(cantidad);
-    } 
+    if (cantidadValue === '') {
+      setError(cantidad, '*Campo obligatorio');
+      res = false;
+    } else if (!Number.isInteger(parseFloat(cantidadValue))) {
+      setError(cantidad, '*El campo debe ser un número entero sin decimales');
+      res = false;
+    } else if (cantidadValue > 999) {
+      setError(cantidad, '*Sólo se permite hasta 999 de stock');
+      res = false;
+    } else if (cantidadValue < 0) {
+      setError(cantidad, '*El campo no puede ser negativo');
+      res = false;
+    } else {
+      setSuccess(cantidad);
+    }
     if (!archivos || !archivos.length) {
-        setError(img, 'Campo obligatorio');
+      setError(img, '*Campo obligatorio');
+      res = false;
+    } else {
+      const tiposPermitidos = ['image/jpeg', 'image/png'];
+      const tipoArchivo = archivos[0].type;
+      if (!tiposPermitidos.includes(tipoArchivo)) {
+        setError(img, '*Solo se permiten archivos de tipo JPG o PNG');
         res = false;
-    }else{
+      } else {
         setSuccess(img);
+      }
     }
     if(res==false){
         return res;
     }else{
         formulario.submit();
+        $seleccionArchivos.value = '';
     }
     
 }
