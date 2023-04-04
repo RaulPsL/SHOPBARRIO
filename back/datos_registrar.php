@@ -27,10 +27,14 @@ include_once dirname(__DIR__) . '/conection.php';
     $query = mysqli_query($conn, $sql);
 
     if($query){
-        echo "correcto";
+        
+        ?>
+        <script>window.location.href = "https://shopbarrio.online/prueba/vender";</script>
+        <?php
     }else{
         echo "incorrecto";
     }
+
 
 
 
