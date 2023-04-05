@@ -1,0 +1,152 @@
+
+.contenido {
+    height: 83.9vh;
+    width: 97%;
+    padding: 15px 15px 11px 15px;
+}
+
+.main-contenido {
+    display: flex;
+}
+.container{
+    margin-right: 150px;
+}
+.inputButton {
+    margin-bottom: 35px;
+    margin-top: 15px;
+}
+.inputButton label{
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.inputButton input{
+    border-radius: 10px;
+    border: 1px solid;
+    height: 50px;
+    width: 350px;
+    padding: 15px;
+    margin-bottom: 5px;   
+    box-sizing: border-box; 
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+}
+.inputButton #cantidad {
+    width: 240px;
+    height: 50;
+}
+.inputButton select{
+    border-radius: 10px;
+    border: 1px solid;
+    height: 50px;
+    width: 341px;
+    font-family: 'Nunito Sans', sans-serif; 
+    margin-bottom: 5px; 
+}
+.inputButton img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 5px; 
+}
+.inputButton .error input {
+    border-color: #ff3860;
+}
+
+.inputButton .descripcion {
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 15px;
+    width: 850px;
+    height: 172px;
+}
+.main-contenido p {
+    color: red;
+    font-size: 1.1rem;
+    margin-top: 6px;
+}
+.botones {
+    display: inline-block;
+}
+.botones a{
+    color: #FFFFFF;
+    border-radius: 10px; 
+    padding: 9px 100px;
+    background-color: #E76F51;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 95px;
+    border: 1px solid #000000;
+}
+.botones a:hover{
+    border: 1px solid #1c0d02;
+    box-shadow: 0px 1px 1px rgba(0,0, 0, 1);
+    cursor: pointer;
+}
+.boton {
+    margin-bottom: 40px;
+}
+button {
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #000000;
+    border-radius: 8px;    
+    margin-right: 150px;
+    height: 50px;
+    width: 277px;
+    background-color: #2A9D8F;
+    font-family: 'Nunito Sans', sans-serif; 
+    font-size: 1.6rem;
+}
+.botones button:hover {
+    border: 1px solid #1c0d02;
+    box-shadow: 0px 1px 1px rgba(0,0, 0, 1);
+    cursor: pointer;
+}
+div.boton{
+    color: black;
+    position : relative ;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 8px;    
+    margin-right: 150px;
+    height: 40px;
+    width: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+input.subir{
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    opacity: 0;
+}
+.inputButton .error {
+    color: #ff3860;
+    font-size: 0.9rem;
+    height: 1px;
+}
+.izq {
+    margin-left: 47px;
+}
+.der{
+    margin-left: 16.23px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+.botonCR {
+    margin-top: 120px;
+}
