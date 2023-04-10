@@ -29,20 +29,9 @@ include_once dirname(__DIR__) . '/conection.php';
     if($query){
         
         ?>
-        <script>window.location.href = "https://shopbarrio.online/prueba/vender";</script>
+        <script>window.location.href = "https://shopbarrio.online/administracion/mostrar_productos";</script>
         <?php
     }else{
+        
         echo "incorrecto";
     }
-
-
-
-
-
-
-    
-
-
-
-
-    
