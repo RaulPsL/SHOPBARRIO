@@ -94,13 +94,7 @@ const validateInputs = () => {
         } else if (roundedValue > 999.9 || isNaN(roundedValue)) {
           setError(venta, '*El campo debe ser menor a 1000 y tener solo 1 decimal');
           res = false;
-        } else if(ventaValue == compraValue){
-          setError(venta, '*venta y compra no permiten el mismo valor');
-          res = false;
-        }else if(ventaValue < compraValue){
-          setError(venta, '*venta no debe ser menor al campo compra');
-          res = false;
-        }else {
+        } else {
           setSuccess(venta);
         }
       }
@@ -122,10 +116,7 @@ const validateInputs = () => {
           setError(compra, '*El campo debe tener solo 1 decimal');
           res = false;
         } else if (roundedValue > 999.9 || isNaN(roundedValue)) {
-          setError(compra, '*El campo debe ser menor a 1000');
-          res = false;
-        }else if(ventaValue == compraValue){
-          setError(compra, '*venta y compra no permiten el mismo valor');
+          setError(compra, '*El campo debe ser menor a 1000 y tener solo 1 decimal');
           res = false;
         } else {
           setSuccess(compra);
@@ -186,37 +177,24 @@ const validateInputs = () => {
 //previsualizar
 
 document.addEventListener("DOMContentLoaded", function() {
-  const $seleccionArchivos = document.querySelector(".subir");
-  $imagenPrevisualizacion = document.querySelector(".img");
+    const $seleccionArchivos = document.querySelector(".subir");
+    $imagenPrevisualizacion = document.querySelector(".img");
 
-  // Escuchar cuando cambie
-  $seleccionArchivos.addEventListener("change", () => {
-    // Los archivos seleccionados, pueden ser muchos o uno
-    const archivos = $seleccionArchivos.files;
-    // Si no hay archivos salimos de la función y quitamos la imagen
-    if (!archivos || !archivos.length) {
-      $imagenPrevisualizacion.src = "";
-      return;
-    }
-    // Ahora tomamos el primer archivo, el cual vamos a previsualizar
-    const primerArchivo = archivos[0];
-    // Lo convertimos a un objeto de tipo objectURL
-    const objectURL = URL.createObjectURL(primerArchivo);
-    // Validación de tamaño de imagen
-    const img = new Image();
-    img.onload = function() {
-      const height = this.height;
-      const width = this.width;
-      if (height != 200 || width != 200) {
-        alert("La imagen debe tener un tamaño máximo de 200x200 píxeles");
-        $imagenPrevisualizacion.src = "";
-      } else {
-        // Y a la fuente de la imagen le ponemos el objectURL
-        $imagenPrevisualizacion.src = objectURL;
-      }
-    };
-    img.src = objectURL;
-  });
+    // Escuchar cuando cambie
+    $seleccionArchivos.addEventListener("change", () => {
+  // Los archivos seleccionados, pueden ser muchos o uno
+  const archivos = $seleccionArchivos.files;
+  // Si no hay archivos salimos de la función y quitamos la imagen
+  if (!archivos || !archivos.length) {
+    $imagenPrevisualizacion.src = "";
+    return;
+  }
+  // Ahora tomamos el primer archivo, el cual vamos a previsualizar
+  const primerArchivo = archivos[0];
+  // Lo convertimos a un objeto de tipo objectURL
+  const objectURL = URL.createObjectURL(primerArchivo);
+  // Y a la fuente de la imagen le ponemos el objectURL
+  $imagenPrevisualizacion.src = objectURL;
 });
-
+});
 

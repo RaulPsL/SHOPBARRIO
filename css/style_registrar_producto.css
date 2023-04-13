@@ -18,7 +18,7 @@
     margin-bottom: 10px;
     display: block;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 .inputButton input{
     border-radius: 10px;
@@ -41,14 +41,12 @@
     height: 50px;
     width: 341px;
     font-family: 'Nunito Sans', sans-serif; 
-    margin-bottom: 5px;
-    font-size: 16px; 
+    margin-bottom: 5px; 
 }
 .inputButton img {
     width: 200px;
     height: 200px;
-    margin-bottom: 5px;
-    
+    margin-bottom: 5px; 
 }
 .inputButton .error input {
     border-color: #ff3860;
@@ -61,11 +59,10 @@
     width: 850px;
     height: 172px;
     font-family: 'Nunito Sans', sans-serif; 
-    font-size: 16px;
 }
 .main-contenido p {
     color: red;
-    font-size: 14.4px;
+    font-size: 1.1rem;
     margin-top: 6px;
 }
 .botones {
@@ -74,9 +71,9 @@
 .botones a{
     color: #FFFFFF;
     border-radius: 10px; 
-    padding: 13px 95.3px;
+    padding: 9px 100px;
     background-color: #E76F51;
-    font-size: 20px;
+    font-size: 1.6rem;
     text-decoration: none;
     font-weight: bold;
     margin-right: 95px;
@@ -101,7 +98,7 @@ button {
     width: 277px;
     background-color: #2A9D8F;
     font-family: 'Nunito Sans', sans-serif; 
-    font-size: 20px;
+    font-size: 1.6rem;
 }
 .botones button:hover {
     border: 1px solid #1c0d02;
@@ -136,7 +133,7 @@ input.subir{
 }
 .inputButton .error {
     color: #ff3860;
-    font-size: 14.4px;
+    font-size: 0.9rem;
     height: 1px;
 }
 .izq {
