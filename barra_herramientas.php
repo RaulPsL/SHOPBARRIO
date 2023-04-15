@@ -8,7 +8,12 @@ switch ($pagina) {
         <div class="barra-herramientas historico">
             <label class="venta-historico"><h3>Total Vendido: Bs. <?php echo $venta_historico; ?></h3></label>
 
+
+        <div class="barra-herramientas historico">
+            <label class="venta-historico"><h3>Total Vendido: Bs. <?php echo $venta_historico; ?></h3></label>
+
       
+
 
         </div>
         <?php

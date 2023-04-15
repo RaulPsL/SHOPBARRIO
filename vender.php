@@ -1,6 +1,10 @@
 <?php 
 
+
+
+
 session_start();
+
 
 include_once 'back/datos_productos.php';
 $productos=$_SESSION['productos'];

@@ -7,7 +7,7 @@
     </div>
     <div class="menu-content">
         <div class="menu-content-area areas-subareas">
-            <img src="src/icon-product.svg">
+            <img src="src/icon-product.svg" class="t11">
             <h2>Productos</h2>
             <img class="icon-area-0 " src="src/icon-down.svg">
             <img class="icon-area-0 ocultar" src="src/icon-up.svg">
@@ -17,7 +17,11 @@
 
             <a href="https://shopbarrio.online/administracion/mostrar_productos"><h3>Todos los productos</h3></a>
 
+
+            <a href="https://shopbarrio.online/administracion/mostrar_productos"><h3>Todos los productos</h3></a>
+
             <a href="https://shopbarrio.online/prueba/mostrar_productos"><h3>Todos los productos</h3></a>
+
 
         </div>
         <div class="menu-content-subarea area-0 ocultar-flex"   >
@@ -25,7 +29,7 @@
             <a href="https://shopbarrio.online/administracion/registrar_producto"><h3>Nuevo producto</h3></a>
         </div>
         <div onclick="abrirPagina('/#')" class="menu-content-area">
-            <img src="src/icon-vender.svg">
+            <img src="src/icon-vender.svg" class="t22">
             <h2>Vender</h2>
             <img src="src/icon-down.svg" style="opacity:0;">
         </div>

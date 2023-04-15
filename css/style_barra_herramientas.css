@@ -10,6 +10,7 @@
     width: fit-content;
     justify-content: flex-end;
 
+
 }
 .venta-historico{
     width: 250px;
@@ -18,7 +19,11 @@
 
     border-radius: 0 16px 0 16px;
 
+
+    border-radius: 0 16px 0 16px;
+
     border-radius: 0px 16px 0px 16px;
+
 
     color: #ffffff;
     text-align: center;

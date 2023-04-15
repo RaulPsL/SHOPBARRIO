@@ -112,6 +112,11 @@ h1 {
     border-top-left-radius: 10px;
 
 
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+
+
 }
 .contenedor-items{
     max-height: 604px;
@@ -144,7 +149,12 @@ h1 {
     width: 188px;
     height: 24px;
 
+
+    width: 188px;
+    height: 24px;
+
     width: 150px;
+
 
     border: none;
     background: #2a9d8f;
@@ -167,7 +177,12 @@ h1 {
     width: 101px;
     height: 24px;
 
+
+    width: 101px;
+    height: 24px;
+
     width: 95px;
+
 
     border: none;
     background: #e76f51;
@@ -251,6 +266,18 @@ h1 {
        color: red;
 
        width: 34px;
+       height: 40px;
+       text-align: center;
+       border-radius: 10px;
+       border: 1px solid #d9d9d9;
+       cursor: pointer;
+       background: transparent;
+       transition: .3s;
+}
+
+
+
+       width: 34px;
 
        width: 42px;
 
@@ -262,6 +289,7 @@ h1 {
        background: transparent;
        transition: .3s;
 }
+
 
 .item .boton-eliminar:hover {
     /*scale: 1.05;*/

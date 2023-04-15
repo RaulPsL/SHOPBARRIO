@@ -1,5 +1,7 @@
 /* LISTA VACIA */
 
+
+
 .tabla-vacio{
     background-color: #ffffff;
 }
@@ -7,11 +9,13 @@
     margin-left: 78%;
     width: 125px;}
 
+
 .imagen2 {
     margin-left: 850px;
     width: 125px;
     height: 90px;
 }
+
 
 
 .contenedor {
@@ -39,6 +43,7 @@
 table{
     width: 100%;
 
+
 .tarjeta-imagen {
     width: 125px;
     height: 100px;
@@ -50,11 +55,13 @@ table{
     background-color: #2A9D8F;
     inline-size: max-content;
 
+
 }
 
 td,th {
     padding: 30px;
 }
+
 
 td {
     background-color: #a2ddd6;
@@ -87,6 +94,7 @@ table > thead > tr > th:nth-child(5){
 }
 
 
+
 td {
     background-color: #A2DDD6;
     font-size: 18px;
@@ -106,4 +114,5 @@ th {
     width: 45px;
     height: 45px;
 }
+
 

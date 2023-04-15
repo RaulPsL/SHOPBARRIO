@@ -57,4 +57,5 @@ function abrirPagina(link){
 
     window.location.href="https://shopbarrio.online/prueba/vender"
 
+
 }

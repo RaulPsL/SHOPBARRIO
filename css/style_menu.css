@@ -29,7 +29,14 @@
     display: flex;
     justify-content: flex-end;       
 }
-
+.t11{
+width:40px;
+height:58.19px;
+}
+.t22{
+width:40px;
+height:58.19px;
+}
 .menu-content-subarea > a > h3{
     width: 183px;
     height: 25px;
