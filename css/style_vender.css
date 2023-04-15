@@ -107,8 +107,16 @@ h1 {
     color: #ffffff;
     text-align: center;
     height: 51px;
+
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+
+
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+
+
 }
 .contenedor-items{
     max-height: 604px;
@@ -137,8 +145,17 @@ h1 {
 
 .boton-registrar-venta {
     display: block;
+
     width: 188px;
     height: 24px;
+
+
+    width: 188px;
+    height: 24px;
+
+    width: 150px;
+
+
     border: none;
     background: #2a9d8f;
     color: white;
@@ -156,8 +173,17 @@ h1 {
 
 .detalle-total .boton-cancelar-registro-venta {
     display: block;
+
     width: 101px;
     height: 24px;
+
+
+    width: 101px;
+    height: 24px;
+
+    width: 95px;
+
+
     border: none;
     background: #e76f51;
     color: white;
@@ -238,6 +264,7 @@ h1 {
        right: 15px;
        top: 30px;
        color: red;
+
        width: 34px;
        height: 40px;
        text-align: center;
@@ -247,6 +274,22 @@ h1 {
        background: transparent;
        transition: .3s;
 }
+
+
+
+       width: 34px;
+
+       width: 42px;
+
+       height: 40px;
+       text-align: center;
+       border-radius: 10px;
+       border: 1px solid #d9d9d9;
+       cursor: pointer;
+       background: transparent;
+       transition: .3s;
+}
+
 
 .item .boton-eliminar:hover {
     /*scale: 1.05;*/
