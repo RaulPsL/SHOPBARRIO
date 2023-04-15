@@ -6,9 +6,13 @@
     border-radius: 16px;
     margin: 0 32px 20px 40px;
 
+    width: fit-content;
+    justify-content: flex-end;
+
 
     width: fit-content;
     justify-content: flex-end;
+
 
 
 }
@@ -17,12 +21,16 @@
     height: 50px;
     background: #2a9d8f;
 
+    border-radius: 0px 16px 0px 16px;
+
+
     border-radius: 0 16px 0 16px;
 
 
     border-radius: 0 16px 0 16px;
 
     border-radius: 0px 16px 0px 16px;
+
 
 
     color: #ffffff;

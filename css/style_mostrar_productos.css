@@ -2,6 +2,7 @@
 
 
 
+
 .tabla-vacio{
     background-color: #ffffff;
 }
@@ -10,11 +11,14 @@
     width: 125px;}
 
 
+
 .imagen2 {
     margin-left: 850px;
     width: 125px;
     height: 90px;
 }
+
+
 
 
 
@@ -34,6 +38,7 @@
 /* LISTA LLENA */
 
 
+
 .tabla1 {
     margin: 0 32px 0 40px;
     background-color: #aceee6;
@@ -42,6 +47,7 @@
 }
 table{
     width: 100%;
+
 
 
 .tarjeta-imagen {
@@ -55,12 +61,12 @@ table{
     background-color: #2A9D8F;
     inline-size: max-content;
 
-
 }
 
 td,th {
     padding: 30px;
 }
+
 
 
 td {
@@ -95,6 +101,7 @@ table > thead > tr > th:nth-child(5){
 
 
 
+
 td {
     background-color: #A2DDD6;
     font-size: 18px;
@@ -113,6 +120,10 @@ th {
 .lp {
     width: 45px;
     height: 45px;
+
 }
+
+}
+
 
 
