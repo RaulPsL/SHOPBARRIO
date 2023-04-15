@@ -5,7 +5,7 @@ switch ($pagina) {
     case "vender.php":
         ?>
         <div class="barra-herramientas">
-            <label class="venta-historico">Total vendido: Bs. <?php echo $venta_historico; ?></label>
+            <label class="venta-historico"><h3>Historico de ventas: Bs. <?php echo $venta_historico; ?></h3></label>
         </div>
         <?php
         break;
