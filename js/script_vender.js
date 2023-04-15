@@ -66,7 +66,6 @@ function agregarProducto(id) {
       this.value = 1;
       actualizarPrecioTotalCantidad(this.value, id)
       actualizarPrecioParcial(this.value, id)
-
     } else {
       console.log(this.value + " stock " + productos[id].STOCK_PRODUCTO);
       if (parseInt(this.value) > productos[id].STOCK_PRODUCTO) {
@@ -84,30 +83,34 @@ function agregarProducto(id) {
 }
 function actualizarPrecioTotalCantidad(cantidad, id) {
   var precioParcial = document.getElementById('precio-' + id);
-  var precioParcialActual = parseFloat(precioParcial.textContent).toFixed(2);
+  var precioParcialActual = parseFloat(precioParcial.textContent).toFixed(1);
+  precioParcialActual = parseFloat(precioParcialActual)
 
   var precioTotal = document.querySelector('.detalle-precio-total');
-  var precioTotalActual = parseFloat(precioTotal.textContent).toFixed(2);;
+  var precioTotalActual = parseFloat(precioTotal.textContent).toFixed(1);
+  precioTotalActual = parseFloat(precioTotalActual)
 
   // Obtener el valor actual y convertirlo en un número entero
 
-  var precioParcialNuevo = cantidad * parseFloat(productos[id].PRECIOV_PRODUCTO)
-
+  var precioParcialNuevo = parseFloat(cantidad * productos[id].PRECIOV_PRODUCTO).toFixed(1)
+  precioParcialNuevo = parseFloat(precioParcialNuevo)
   var precioNuevo;
 
   if (precioParcialActual > precioParcialNuevo) {
+
     precioNuevo = precioParcialActual - precioParcialNuevo
+    precioNuevo = parseFloat(precioNuevo)
 
     // Actualizar el valor con el nuevo precio
-    precioTotal.textContent = precioTotalActual - precioNuevo;
-    precioTotalActual.textContent = parseFloat(precioTotalActual.textContent).toFixed(2);
+    precioTotal.textContent =  (precioTotalActual - precioNuevo).toFixed(1);
   }
   if (precioParcialActual < precioParcialNuevo) {
-    precioNuevo = precioParcialNuevo - precioParcialActual
+
+    precioNuevo = parseFloat(precioParcialNuevo - precioParcialActual).toFixed(1)
+    precioNuevo = parseFloat(precioNuevo)
 
     // Actualizar el valor con el nuevo precio
-    precioTotal.textContent = precioTotalActual + precioNuevo;
-    precioTotalActual.textContent = parseFloat(precioTotalActual.textContent).toFixed(2);
+    precioTotal.textContent =  (precioTotalActual + precioNuevo).toFixed(1);
   }
 }
 function actualizarPrecioParcial(cantidad, id) {
@@ -116,14 +119,16 @@ function actualizarPrecioParcial(cantidad, id) {
   precioParcial.textContent = cantidad * productos[id].PRECIOV_PRODUCTO;
   precioParcial.textContent = parseFloat(precioParcial.textContent).toFixed(2);
 }
+
 function actualizarPrecioTotal(id) {
   var precioTotal = document.querySelector('.detalle-precio-total');
   // Obtener el valor actual y convertirlo en un número entero
   var valorActual = parseFloat(precioTotal.textContent);
   // Actualizar el valor con el nuevo precio
-  precioTotal.textContent = valorActual + parseFloat(productos[id].PRECIOV_PRODUCTO);
-  precioTotal.textContent = parseFloat(precioTotal.textContent).toFixed(2);
+  precioTotal.textContent = (valorActual + parseFloat(productos[id].PRECIOV_PRODUCTO)).toFixed(2);
 }
+
+
 function aumentarCantidad(id) {
 
   let cantidadInput = document.getElementById("cantidad-" + id);
@@ -160,6 +165,7 @@ function mostrarGif() {
   if (items.length < 1) {
     document.getElementById("detalle-gif-vacio").classList.remove("ocultar")
     document.getElementById("detalle-total").classList.add("ocultar")
+    document.querySelector(".detalle-precio-total").textContent=0
   }
 }
 function ocultargif() {
@@ -239,5 +245,5 @@ function vaciar() {
   contenedor.innerHTML = "";
   elementosClickeados = {};
   document.querySelector('.detalle-precio-total').textContent = '0';
-  mostrarGif()
+  mostrarGif()
 }

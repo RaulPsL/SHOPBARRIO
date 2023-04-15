@@ -1,3 +1,25 @@
+// eliminar la e de los inputs number 
+document.addEventListener("DOMContentLoaded", function() {
+  const venta = document.getElementById('venta');
+  venta.addEventListener('keydown', function(event) {
+    if (event.key === 'e' || event.key === 'E' || event.key === ',') {
+      event.preventDefault();
+    }
+  });
+  const compra = document.getElementById('compra');
+  compra.addEventListener('keydown', function(event) {
+    if (event.key === 'e' || event.key === 'E' || event.key === ',') {
+      event.preventDefault();
+    }
+  });
+  const cantidad = document.getElementById('cantidad');
+  cantidad.addEventListener('keydown', function(event) {
+    if (event.key === 'e' || event.key === 'E'|| event.key === ',') {
+      event.preventDefault();
+    }
+  });
+});
+
 function validate() {
     const formulario = document.getElementById('formulario');
     const nombreproducto = document.getElementById('nombreproducto');
@@ -47,7 +69,7 @@ const validateInputs = () => {
     }else if(nombreproductoValue.length<3){
         setError(nombreproducto, '*El campo debe tener más de 2 caracteres y solo alfabéticos');
         res = false;
-    }else if(!/^[a-zA-Z]+$/.test(nombreproductoValue)){
+    }else if(!/^[a-zA-Z\s]+$/.test(nombreproductoValue)){
       setError(nombreproducto, '*El campo debe tener más de 2 caracteres y solo alfabéticos');
       res = false;
     }else{
@@ -55,7 +77,7 @@ const validateInputs = () => {
     }
     ///// validacion venta
     if (ventaValue === '') {
-        setError(venta, '*Campo obligatorio y no permite caracteres alfabéticos'); 
+        setError(venta, '*Campo obligatorio'); 
         res = false;
       } else if (ventaValue < 0) {
         setError(venta, '*El campo no puede ser negativo');
@@ -72,14 +94,20 @@ const validateInputs = () => {
         } else if (roundedValue > 999.9 || isNaN(roundedValue)) {
           setError(venta, '*El campo debe ser menor a 1000 y tener solo 1 decimal');
           res = false;
-        } else {
+        } else if(ventaValue == compraValue){
+          setError(venta, '*venta y compra no permiten el mismo valor');
+          res = false;
+        }else if(ventaValue < compraValue){
+          setError(venta, '*venta no debe ser menor al campo compra');
+          res = false;
+        }else {
           setSuccess(venta);
         }
       }
       
     ///// validacion compra
     if (compraValue === '') {
-        setError(compra, '*Campo obligatorio y no permite caracteres alfabéticos');
+        setError(compra, '*Campo obligatorio');
         res = false;
       } else if (compraValue < 0) {
         setError(compra, '*El campo no puede ser negativo');
@@ -94,7 +122,10 @@ const validateInputs = () => {
           setError(compra, '*El campo debe tener solo 1 decimal');
           res = false;
         } else if (roundedValue > 999.9 || isNaN(roundedValue)) {
-          setError(compra, '*El campo debe ser menor a 1000 y tener solo 1 decimal');
+          setError(compra, '*El campo debe ser menor a 1000');
+          res = false;
+        }else if(ventaValue == compraValue){
+          setError(compra, '*venta y compra no permiten el mismo valor');
           res = false;
         } else {
           setSuccess(compra);
@@ -116,7 +147,7 @@ const validateInputs = () => {
         setSuccess(categoria);
     }
     if (cantidadValue === '') {
-      setError(cantidad, '*Campo obligatorio y no permite caracteres alfabéticos');
+      setError(cantidad, '*Campo obligatorio');
       res = false;
     } else if (!Number.isInteger(parseFloat(cantidadValue))) {
       setError(cantidad, '*El campo debe ser un número entero sin decimales');
@@ -155,23 +186,38 @@ const validateInputs = () => {
 //previsualizar
 
 document.addEventListener("DOMContentLoaded", function() {
-    const $seleccionArchivos = document.querySelector(".subir");
-    $imagenPrevisualizacion = document.querySelector(".img");
+  const $seleccionArchivos = document.querySelector(".subir");
+  $imagenPrevisualizacion = document.querySelector(".img");
 
-    // Escuchar cuando cambie
-    $seleccionArchivos.addEventListener("change", () => {
-  // Los archivos seleccionados, pueden ser muchos o uno
-  const archivos = $seleccionArchivos.files;
-  // Si no hay archivos salimos de la función y quitamos la imagen
-  if (!archivos || !archivos.length) {
-    $imagenPrevisualizacion.src = "";
-    return;
-  }
-  // Ahora tomamos el primer archivo, el cual vamos a previsualizar
-  const primerArchivo = archivos[0];
-  // Lo convertimos a un objeto de tipo objectURL
-  const objectURL = URL.createObjectURL(primerArchivo);
-  // Y a la fuente de la imagen le ponemos el objectURL
-  $imagenPrevisualizacion.src = objectURL;
+  // Escuchar cuando cambie
+  $seleccionArchivos.addEventListener("change", () => {
+    // Los archivos seleccionados, pueden ser muchos o uno
+    const archivos = $seleccionArchivos.files;
+    // Si no hay archivos salimos de la función y quitamos la imagen
+    if (!archivos || !archivos.length) {
+      $imagenPrevisualizacion.src = "";
+      return;
+    }
+    // Ahora tomamos el primer archivo, el cual vamos a previsualizar
+    const primerArchivo = archivos[0];
+    // Lo convertimos a un objeto de tipo objectURL
+    const objectURL = URL.createObjectURL(primerArchivo);
+    // Validación de tamaño de imagen
+    const img = new Image();
+    img.onload = function() {
+      const height = this.height;
+      const width = this.width;
+      if (height != 200 || width != 200) {
+        alert("La imagen debe tener un tamaño máximo de 200x200 píxeles");
+        $imagenPrevisualizacion.src = "";
+        $seleccionArchivos.value = "";
+      } else {
+        // Y a la fuente de la imagen le ponemos el objectURL
+        $imagenPrevisualizacion.src = objectURL;
+      }
+    };
+    img.src = objectURL;
+  });
 });
-});
+
+

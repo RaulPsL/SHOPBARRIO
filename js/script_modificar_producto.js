@@ -25,7 +25,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   });
 })
-
+function lettersOnly(input){
+  var  regex = /[^a-z]/gi ;
+  input.value = input.value.replace(regex,"")
+}
 function validarcampos() {
     var today = new Date();
     var nombre = document.getElementById("Nombre_prod");
