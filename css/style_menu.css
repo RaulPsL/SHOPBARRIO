@@ -1,11 +1,4 @@
-body{
-    margin:0;
-    background-color: #F7F7F8;
-}
-.menu{
-    background-color: #254653;
-    min-height:96.8vh;
-}
+
 .menu-gif{
     width: 147px; 
     height: 153px;
@@ -36,7 +29,14 @@ body{
     display: flex;
     justify-content: flex-end;       
 }
-
+.t11{
+width:40px;
+height:58.19px;
+}
+.t22{
+width:40px;
+height:58.19px;
+}
 .menu-content-subarea > a > h3{
     width: 183px;
     height: 25px;
@@ -48,7 +48,7 @@ body{
         color: #F4A261;
     }
 .ocultar{
-    display: none ;
+    display: none !important;
 }
 .mostrar{
     display: block ;
