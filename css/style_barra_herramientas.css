@@ -5,12 +5,21 @@
     background-color: #f7f7f8;
     border-radius: 16px;
     margin: 0 32px 20px 40px;
+
+
+    width: fit-content;
+    justify-content: flex-end;
+
 }
 .venta-historico{
     width: 250px;
     height: 50px;
     background: #2a9d8f;
+
     border-radius: 0 16px 0 16px;
+
+    border-radius: 0px 16px 0px 16px;
+
     color: #ffffff;
     text-align: center;
 }

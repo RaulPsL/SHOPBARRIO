@@ -4,8 +4,12 @@ $pagina=basename($_SERVER['PHP_SELF']);
 switch ($pagina) {
     case "vender.php":
         ?>
+
         <div class="barra-herramientas historico">
             <label class="venta-historico"><h3>Total Vendido: Bs. <?php echo $venta_historico; ?></h3></label>
+
+      
+
         </div>
         <?php
         break;
