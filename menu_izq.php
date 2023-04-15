@@ -14,11 +14,15 @@
         </div>
         <div class="menu-content-subarea area-0 ocultar-flex">
             <img src="src/icon-arrow.svg">
+
+            <a href="https://shopbarrio.online/administracion/mostrar_productos"><h3>Todos los productos</h3></a>
+
             <a href="https://shopbarrio.online/prueba/mostrar_productos"><h3>Todos los productos</h3></a>
+
         </div>
         <div class="menu-content-subarea area-0 ocultar-flex"   >
             <img src="src/icon-arrow.svg">
-            <a href="#"><h3>Nuevo producto</h3></a>
+            <a href="https://shopbarrio.online/administracion/registrar_producto"><h3>Nuevo producto</h3></a>
         </div>
         <div onclick="abrirPagina('/#')" class="menu-content-area">
             <img src="src/icon-vender.svg">
