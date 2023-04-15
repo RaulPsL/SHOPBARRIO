@@ -104,18 +104,34 @@ const validateInputs = () => {
     }else{
         setSuccess(categoria);
     }
-    if(cantidadValue === ''){
-        setError(cantidad, 'Campo obligatorio');
+    if (cantidadValue === '') {
+        setError(cantidad, '*Campo obligatorio');
         res = false;
-    }else{
+      } else if (!Number.isInteger(parseFloat(cantidadValue))) {
+        setError(cantidad, '*El campo debe ser un número entero sin decimales');
+        res = false;
+      } else if (cantidadValue > 999) {
+        setError(cantidad, '*Sólo se permite hasta 999 de stock');
+        res = false;
+      } else if (cantidadValue < 0) {
+        setError(cantidad, '*El campo no puede ser negativo');
+        res = false;
+      } else {
         setSuccess(cantidad);
-    } 
-    if (!archivos || !archivos.length) {
-        setError(img, 'Campo obligatorio');
+      }
+      if (!archivos || !archivos.length) {
+        setError(img, '*Campo obligatorio');
         res = false;
-    }else{
-        setSuccess(img);
-    }
+      } else {
+        const tiposPermitidos = ['image/jpeg', 'image/png'];
+        const tipoArchivo = archivos[0].type;
+        if (!tiposPermitidos.includes(tipoArchivo)) {
+          setError(img, '*Solo se permiten archivos de tipo JPG o PNG');
+          res = false;
+        } else {
+          setSuccess(img);
+        }
+      }
     if(res==false){
         return res;
     }else{

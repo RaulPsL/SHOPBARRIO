@@ -27,18 +27,11 @@ include_once dirname(__DIR__) . '/conection.php';
     $query = mysqli_query($conn, $sql);
 
     if($query){
-        echo "correcto";
+        
+        ?>
+        <script>window.location.href = "https://shopbarrio.online/administracion/mostrar_productos";</script>
+        <?php
     }else{
+        
         echo "incorrecto";
     }
-
-
-
-
-
-    
-
-
-
-
-    
