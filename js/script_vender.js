@@ -43,7 +43,6 @@ function agregarProducto(id) {
     <img src="${productos[id].IMAGEN_PRODUCTO}" alt="" width="50px" onerror="this.onerror=null;this.src='src/sinimagen.jpg';">
 
     <div class="item-detalles">
-
         <span class="item-nombre">${productos[id].NOMBRE_PRODUCTO}</span>
         <div class="selector-cantidad">
             <i onclick="reducirEnUno(${productos[id].ID_PRODUCTO})" class="fa-solid fa-minus restar-cantidad"></i>
@@ -67,7 +66,6 @@ function agregarProducto(id) {
       this.value = 1;
       actualizarPrecioTotalCantidad(this.value, id)
       actualizarPrecioParcial(this.value, id)
-
     } else {
       console.log(this.value + " stock " + productos[id].STOCK_PRODUCTO);
       if (parseInt(this.value) > productos[id].STOCK_PRODUCTO) {
@@ -85,25 +83,14 @@ function agregarProducto(id) {
 }
 function actualizarPrecioTotalCantidad(cantidad, id) {
   var precioParcial = document.getElementById('precio-' + id);
-
-  var precioParcialActual = parseFloat(precioParcial.textContent).toFixed(2);
-
-
   var precioParcialActual = parseFloat(precioParcial.textContent).toFixed(1);
   precioParcialActual = parseFloat(precioParcialActual)
-
-
 
   var precioTotal = document.querySelector('.detalle-precio-total');
   var precioTotalActual = parseFloat(precioTotal.textContent).toFixed(1);
   precioTotalActual = parseFloat(precioTotalActual)
 
   // Obtener el valor actual y convertirlo en un número entero
-
-
-  var precioParcialNuevo = cantidad * parseFloat(productos[id].PRECIOV_PRODUCTO)
-
-
 
   var precioParcialNuevo = parseFloat(cantidad * productos[id].PRECIOV_PRODUCTO).toFixed(1)
   precioParcialNuevo = parseFloat(precioParcialNuevo)
@@ -112,42 +99,15 @@ function actualizarPrecioTotalCantidad(cantidad, id) {
   if (precioParcialActual > precioParcialNuevo) {
 
     precioNuevo = precioParcialActual - precioParcialNuevo
-
-
-
-    precioNuevo = precioParcialActual - precioParcialNuevo
     precioNuevo = parseFloat(precioNuevo)
-
-
-    precioNuevo = precioParcialActual - precioParcialNuevo
-    precioNuevo = parseFloat(precioNuevo)
-
-    precioNuevo = precioParcialActual - precioParcialNuevo
-
-
 
     // Actualizar el valor con el nuevo precio
     precioTotal.textContent =  (precioTotalActual - precioNuevo).toFixed(1);
   }
   if (precioParcialActual < precioParcialNuevo) {
 
-    precioNuevo = precioParcialNuevo - precioParcialActual
-
-
-
-
     precioNuevo = parseFloat(precioParcialNuevo - precioParcialActual).toFixed(1)
     precioNuevo = parseFloat(precioNuevo)
-
-
-
-    precioNuevo = parseFloat(precioParcialNuevo - precioParcialActual).toFixed(1)
-    precioNuevo = parseFloat(precioNuevo)
-
-    precioNuevo = precioParcialNuevo - precioParcialActual
-
-
-
 
     // Actualizar el valor con el nuevo precio
     precioTotal.textContent =  (precioTotalActual + precioNuevo).toFixed(1);
@@ -168,12 +128,8 @@ function actualizarPrecioTotal(id) {
   precioTotal.textContent = (valorActual + parseFloat(productos[id].PRECIOV_PRODUCTO)).toFixed(2);
 }
 
+
 function aumentarCantidad(id) {
-
-
-
-
-
 
   let cantidadInput = document.getElementById("cantidad-" + id);
 
@@ -203,17 +159,6 @@ function eliminar(id) {
 
   elementosClickeados["producto-" + id] = false;
   mostrarGif()
-
-}
-function mostrarGif() {
-  var items = document.getElementsByClassName("item");
-  if (items.length < 1) {
-    document.getElementById("detalle-gif-vacio").classList.remove("ocultar")
-    document.getElementById("detalle-total").classList.add("ocultar")
-  }
-}
-
-
 }
 function mostrarGif() {
   var items = document.getElementsByClassName("item");
@@ -222,7 +167,6 @@ function mostrarGif() {
     document.getElementById("detalle-total").classList.add("ocultar")
     document.querySelector(".detalle-precio-total").textContent=0
   }
-
 }
 function ocultargif() {
   document.getElementById("detalle-gif-vacio").classList.add("ocultar")
@@ -296,173 +240,10 @@ function enviar() {
 
   }
 }
-
-}
-function ocultargif() {
-  document.getElementById("detalle-gif-vacio").classList.add("ocultar")
-  document.getElementById("detalle-total").classList.remove("ocultar")
-}
-function reducirEnUno(id) {
-  var precioParcial = document.getElementById('precio-' + id);
-  var precioParcialActual = parseFloat(precioParcial.textContent)
-  var inputCantidad = document.getElementById('cantidad-' + productos[id].ID_PRODUCTO);
-
-  if (parseInt(inputCantidad.value) > 1) {
-    inputCantidad.value = parseInt(inputCantidad.value) - 1
-    precioParcial.textContent = parseFloat(precioParcialActual - productos[id].PRECIOV_PRODUCTO).toFixed(1);
-
-    var precioTotal = document.querySelector('.detalle-precio-total');
-    var precioTotalActual = parseFloat(precioTotal.textContent);
-
-    // Actualizar el valor con el nuevo precio
-    precioTotal.textContent = parseFloat(precioTotalActual - productos[id].PRECIOV_PRODUCTO).toFixed(1);
-  }
-}
-
-function aumentarEnUno(id) {
-  var precioParcial = document.getElementById('precio-' + id);
-  var precioParcialActual = parseFloat(precioParcial.textContent)
-  var inputCantidad = document.getElementById('cantidad-' + productos[id].ID_PRODUCTO);
-
-  if (parseInt(inputCantidad.value) < productos[id].STOCK_PRODUCTO) {
-    inputCantidad.value = parseInt(inputCantidad.value) + 1
-    precioParcial.textContent = (precioParcialActual + parseFloat(productos[id].PRECIOV_PRODUCTO)).toFixed(1);
-
-    var precioTotal = document.querySelector('.detalle-precio-total');
-    var precioTotalActual = parseFloat(precioTotal.textContent);
-
-    // Actualizar el valor con el nuevo precio
-    precioTotal.textContent = (precioTotalActual + parseFloat(productos[id].PRECIOV_PRODUCTO)).toFixed(1);
-  }
-}
-
-function enviar() {
-  var items = document.getElementsByClassName("item");
-  var elementos = [];
-  if (items.length > 0) {
-
-    var precioTotal = document.querySelector('.detalle-precio-total');
-    var total = parseFloat(precioTotal.textContent);
-    console.log(total);
-
-    Array.from(items).forEach(function (elemento) {
-      var idElemento = elemento.id.substring(5);
-      var cantidad = document.getElementById("cantidad-" + idElemento).value;
-      var elementoObj = {
-        id: idElemento,
-        cantidad: cantidad
-      };
-      elementos.push(elementoObj);
-    });
-    // Realizar solicitud POST utilizando jQuery
-    $.post("back/envio_venta.php", {
-      elementos: JSON.stringify(elementos),
-      total: total
-    }, function (data) {
-      console.log(data);
-      document.getElementById("modal").showModal()
-      // Recargar la página después de 5 segundos
-      setTimeout(function() {
-        location.reload();
-      }, 2000); // 5000 milisegundos = 5 segundos
-      
-    });
-
-  }
-}
-
-}
-function mostrarGif() {
-  var items = document.getElementsByClassName("item");
-  if (items.length < 1) {
-    document.getElementById("detalle-gif-vacio").classList.remove("ocultar")
-    document.getElementById("detalle-total").classList.add("ocultar")
-  }
-}
-
-function ocultargif() {
-  document.getElementById("detalle-gif-vacio").classList.add("ocultar")
-  document.getElementById("detalle-total").classList.remove("ocultar")
-}
-function reducirEnUno(id) {
-  var precioParcial = document.getElementById('precio-' + id);
-  var precioParcialActual = parseFloat(precioParcial.textContent)
-  var inputCantidad = document.getElementById('cantidad-' + productos[id].ID_PRODUCTO);
-
-  if (parseInt(inputCantidad.value) > 1) {
-    inputCantidad.value = parseInt(inputCantidad.value) - 1
-    precioParcial.textContent = parseFloat(precioParcialActual - productos[id].PRECIOV_PRODUCTO).toFixed(1);
-
-    var precioTotal = document.querySelector('.detalle-precio-total');
-    var precioTotalActual = parseFloat(precioTotal.textContent);
-
-    // Actualizar el valor con el nuevo precio
-    precioTotal.textContent = parseFloat(precioTotalActual - productos[id].PRECIOV_PRODUCTO).toFixed(1);
-  }
-}
-
-function aumentarEnUno(id) {
-  var precioParcial = document.getElementById('precio-' + id);
-  var precioParcialActual = parseFloat(precioParcial.textContent)
-  var inputCantidad = document.getElementById('cantidad-' + productos[id].ID_PRODUCTO);
-
-  if (parseInt(inputCantidad.value) < productos[id].STOCK_PRODUCTO) {
-    inputCantidad.value = parseInt(inputCantidad.value) + 1
-    precioParcial.textContent = (precioParcialActual + parseFloat(productos[id].PRECIOV_PRODUCTO)).toFixed(1);
-
-    var precioTotal = document.querySelector('.detalle-precio-total');
-    var precioTotalActual = parseFloat(precioTotal.textContent);
-
-    // Actualizar el valor con el nuevo precio
-    precioTotal.textContent = (precioTotalActual + parseFloat(productos[id].PRECIOV_PRODUCTO)).toFixed(1);
-  }
-}
-
-function enviar() {
-  var items = document.getElementsByClassName("item");
-  var elementos = [];
-  if (items.length > 0) {
-
-    var precioTotal = document.querySelector('.detalle-precio-total');
-    var total = parseFloat(precioTotal.textContent);
-    console.log(total);
-
-    Array.from(items).forEach(function (elemento) {
-      var idElemento = elemento.id.substring(5);
-      var cantidad = document.getElementById("cantidad-" + idElemento).value;
-      var elementoObj = {
-        id: idElemento,
-        cantidad: cantidad
-      };
-      elementos.push(elementoObj);
-    });
-    // Realizar solicitud POST utilizando jQuery
-    $.post("back/envio_venta.php", {
-      elementos: JSON.stringify(elementos),
-      total: total
-    }, function (data) {
-      console.log(data);
-      document.getElementById("modal").showModal()
-      // Recargar la página después de 5 segundos
-      setTimeout(function() {
-        location.reload();
-      }, 2000); // 5000 milisegundos = 5 segundos
-      
-    });
-
-  }
-}
-
 function vaciar() {
   var contenedor = document.querySelector(".contenedor-items");
   contenedor.innerHTML = "";
   elementosClickeados = {};
   document.querySelector('.detalle-precio-total').textContent = '0';
-
-  mostrarGif()
-
-
   mostrarGif()
-
-
 }

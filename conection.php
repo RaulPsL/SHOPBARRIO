@@ -1,6 +1,6 @@
 <?php
 
-$servername = "127.0.0.1:3306";
+$servername = "185.211.7.79:3306";
 $username = "u341591096_shopbarrio";
 $password = "Contraseña1";
 $db = "u341591096_shopbarrio"; 

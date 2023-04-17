@@ -52,14 +52,5 @@ function plegar(index){
 }
 
 function abrirPagina(link){
-
-    window.location.href="https://shopbarrio.online/prueba/vender"
-
-
     window.location.href="https://shopbarrio.online/administracion/vender"
-
-    window.location.href="https://shopbarrio.online/prueba/vender"
-
-
-
 }
