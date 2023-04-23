@@ -1,0 +1,122 @@
+body {
+    background: #f2f2f2;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.head-login {
+    display: flex;
+    background: #254653;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+}
+
+.head-login .icon {
+    display: flex;
+    color: #ffffff;
+    width: 70px;
+    height: 60px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.head-login h1 {
+    display: inline-block;
+    color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.login-form {
+    width: 35%;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: #254653;
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.input-fields {
+    width: 50%;
+    margin: 0px auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.input-fields label {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #254653;
+}
+
+.input-fields input[type="text"],
+input[type="password"] {
+    color: #434343;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #434343;
+    outline: none;
+}
+
+.input-fields input::placeholder {
+    color: #d9d9d9;
+    font-size: 18px;
+}
+
+.boton-enviar {
+    display: block;
+    text-align: center;
+}
+
+.boton-enviar .login-button {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background: #2A9D8F;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 158px;
+    height: 47px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 20%;
+    margin: 0px auto;
+    text-align: center;
+    align-items: center;
+}
+
+.button-container .cancel-button,
+.register-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container .cancel-button,
+a {
+    font-weight: bold;
+    margin-left: 5px;
+    color: #2F88FF;
+}
