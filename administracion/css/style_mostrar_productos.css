@@ -1,0 +1,73 @@
+/* LISTA VACIA */
+.tabla-vacio{
+    background-color: #F7F7F8;
+}
+.imagen2 {
+    margin-left: 85%;
+    justify-content:right;
+    width: 125px;}
+
+.contenedor {
+    display: flex;
+}
+
+.imagen1 {
+    margin-left: 850px;
+}
+
+.gif {
+    width: 250px;
+    height: 250px;
+}
+.detalle-gif{
+    filter:brightness(1.1);
+    mix-blend-mode: multiply;
+}
+
+/* LISTA LLENA */
+
+.tabla1 {
+    margin: 0 42px 0 60px;
+    background-color: #aceee6;
+    max-height: 756px;
+   overflow: auto;    
+
+}
+table{
+    width: 100%;
+    border-spacing: 0;
+}
+
+td,th {
+    padding: 30px;
+}
+td {
+    background-color: #a2ddd6;
+    font-size: 18px;
+    text-align: -webkit-center;
+    border: #aceee6 1px solid;
+}
+
+th {
+    background-color: #254653;
+    font-size: 24px;
+    color: #ffffff;
+border: #aceee6 1px solid;
+
+    
+}
+thead{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+table > thead > tr > th:nth-child(1){
+    width: 125px;
+}
+table > thead > tr > th:nth-child(5){
+    width: 78px;
+}
+.lp {
+    width: 45px;
+    height: 45px;
+}

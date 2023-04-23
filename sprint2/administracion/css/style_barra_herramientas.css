@@ -1,0 +1,33 @@
+.barra-herramientas{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #f7f7f8;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+.venta-historico{
+    background: #2a9d8f;
+    border-radius: 0 16px 0 16px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 25px;
+}
+.venta-historico h3{
+    margin: 10px 10px;
+}
+.imgboton {
+    justify-content: flex-end;
+    gap: 10px;
+}
+.checkbox-label{
+    display: flex;
+    gap: 5px;
+}
+.checkbox-label p{
+    max-width: 107px;
+    text-align: center;
+}
+.checkbox-label input{
+    width: 25px;
+}
