@@ -1,0 +1,206 @@
+
+.input{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    padding: 0px 25px;
+}
+
+/*-------General--------*/
+
+.contenedor_general{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    background-color: #F7F7F8;
+
+}
+
+/*-------Parte_Izquierda-------*/
+
+.cont_iz{
+    margin-left: 7%;
+    display: flex;
+    flex-direction: column;
+}
+.Nombre_prod {
+    border: 1px solid;
+    border-radius: 7px;
+    width: 46%;
+    height: 50px;
+}
+.Precio_v{
+    border: 1px solid;
+    border-radius: 7px;
+    width: 46%;
+    height: 50px;
+}
+.Precio_c{
+    border: 1px solid;
+    border-radius: 7px;
+    width: 46%;
+    height: 50px;
+}
+.Nac{
+    border: 1px solid;
+    border-radius: 7px;
+    width: 46%;
+    height: 50px;
+    }
+.Categoria{
+    border: 1px solid;
+    border-radius: 7px;
+    width: 46%;
+    height: 50px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+}
+.inputButton{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+.Cant{
+    border: 1px solid;
+    border-radius: 7px;
+    width: 39%;
+    height: 50px;
+}
+
+/*--------Parte_derecha------*/
+
+.cont_der{
+    margin-left: -34%;
+}
+.Descripcion{
+    border: 1px solid;
+    border-radius: 7px;
+    width: 81%;
+    height: 205px;
+    padding: 15px 25px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    resize: none;
+}
+
+
+/*.cambiar_imagen{
+display: grid;
+grid-template-rows: 50% 50%;
+border: none;
+}*/
+.Modific_imagen{
+    display: flex;
+    flex-direction: row;
+    border: 0px;
+    width: 200px;
+    height: 200px;
+}
+.boton_cimg{
+    margin-top: 24px;
+    border: 3px solid;
+    border-radius: 7px;
+    width: 240px;
+    height: 40px;
+    
+}
+.optiones_button input{
+    margin-top: 90px;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    margin-right: 150px;
+    
+    width: 240px;
+    height: 40px;
+}
+
+.optiones_button {
+    display:grid;
+    grid-template-columns: 50% 50%;  
+    margin-top: 9vh;
+}
+
+.Guardar {
+    margin-top: 24px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    width: 77%;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color:#2A9D8F;
+    color: #ffffff;
+}
+
+#cancelar{
+    display: block;
+    margin-top: 24px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    width: 77%;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color:#2A9D8F;
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+}
+
+.Guardar:hover {
+    box-shadow: #0000 0px 2px;
+    background-color: #45A0AC;
+}
+.Cancelar:hover{
+    box-shadow: #0000 0px 2px;
+    background-color: #45A0AC;
+}
+
+.butimg{
+    width: 32.5%;
+    height: 50px;
+    display: inline-block;
+     border-radius: 7px;
+     cursor: pointer;
+     color: #000;
+     font-size: 30px;
+     background-color: #F49549;
+     margin-top:4vh;
+    }
+    .foto{
+        display: none;
+    }
+.butimg p {
+        text-align: center;
+       padding-top: 3px; 
+    }
+
+@media screen and (max-width:768px){
+  
+        .contenedor_general{
+            display:grid;
+            grid-template-rows: 50% 50%; 
+            grid-template-columns: none; 
+        }
+        .cont_der{
+            margin-left: 7%;
+        }
+        .Descripcion , .Nombre_prod , .Precio_c , .Precio_v , .Nac , .Cant , .Categoria{
+            width: 80%;
+        }
+        .optiones_button {  
+            margin-top: 3vh;
+        }
+        .butimg{
+            width: 40%;
+        }
+}
+   
