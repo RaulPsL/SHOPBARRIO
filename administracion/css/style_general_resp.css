@@ -1,0 +1,56 @@
+@media screen and (max-width:768px){
+  
+    .contenedor_general{
+        display:grid;
+        grid-template-rows: 50% 50%; 
+        grid-template-columns: none; 
+    }
+    
+    .cont_der , .cont_iz{
+        margin-left: 12%;
+    }
+    .Nombre_prod , .Precio_c , .Precio_v , .Nac , .Cant , .Categoria{
+        width: 84%;
+    }
+    .Descripcion {
+        width: 77%;
+    }
+    .optiones_button {  
+        margin-top: 0vh;
+    }
+    .butimg{
+        width: 50%;
+    }
+    p{
+        font-size: 20px;
+    }
+
+}
+@media screen and (max-width:1440px){
+  
+    .contenedor_general{
+        display:grid;
+        grid-template-rows: 50% 50%; 
+        grid-template-columns: none; 
+    }
+    
+    .cont_der , .cont_iz{
+        margin-left: 12%;
+    }
+    .Nombre_prod , .Precio_c , .Precio_v , .Nac , .Cant , .Categoria{
+        width: 84%;
+    }
+    .Descripcion {
+        width: 77%;
+    }
+    .optiones_button {  
+        margin-top: 0vh;
+    }
+    .butimg{
+        width: 50%;
+    }
+    p{
+        font-size: 20px;
+    }
+
+}
