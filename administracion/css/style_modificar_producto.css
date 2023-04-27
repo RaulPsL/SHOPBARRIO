@@ -1,13 +1,41 @@
 
+.header{
+    margin: 0 40px;
+}
+.lado-derecho{
+    margin-left: 0%;
+}
 .input{
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: lighter;
     padding: 0px 25px;
+    
+}
+
+.alerta{
+    color: red;
+    margin: 0;
+}
+
+.divinput {
+    margin-bottom: 35px;
+    margin-top: 15px;
+}
+
+.divinput .alerta {
+    color: #ff3860;
+    font-size: 14.4px;
+    height: 1px;
 }
 
 /*-------General--------*/
-
+input , label{
+    display: block;
+}
+input{
+    margin-top: 10px;
+}
 .contenedor_general{
     font-family: 'Nunito Sans', sans-serif;
     font-size: 20px;
@@ -20,65 +48,36 @@
 /*-------Parte_Izquierda-------*/
 
 .cont_iz{
-    margin-left: 62px;
+    margin-left: 7%;
     display: flex;
     flex-direction: column;
 }
-.Nombre_prod {
+
+.Nombre_prod ,.Precio_v ,.Precio_c ,.Nac ,.Categoria{
     border: 1px solid;
     border-radius: 7px;
-    width: 350px;
+    width: 46%;
     height: 50px;
 }
-.Precio_v{
-    border: 1px solid;
-    border-radius: 7px;
-    width: 350px;
-    height: 50px;
-}
-.Precio_c{
-    border: 1px solid;
-    border-radius: 7px;
-    width: 350px;
-    height: 50px;
-}
-.Nac{
-    border: 1px solid;
-    border-radius: 7px;
-    width: 350px;
-    height: 50px;
-    }
-.Categoria{
-    border: 1px solid;
-    border-radius: 7px;
-    width: 350px;
-    height: 50px;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 16px;
-    font-weight: lighter;
-}
-.inputButton{
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 20px;
-    font-weight: lighter;
-}
+
 .Cant{
     border: 1px solid;
     border-radius: 7px;
-    width: 240px;
-    height: 50px;
+    width: 39%;
+    height: 40px;
 }
 
 /*--------Parte_derecha------*/
 
 .cont_der{
-    margin-left: -281px;
+    margin-left: -34%;
 }
+
 .Descripcion{
     border: 1px solid;
     border-radius: 7px;
-    width: 883px;
-    height: 205px;
+    width: 80%;
+    height: 172px;
     padding: 15px 25px;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 20px;
@@ -86,12 +85,12 @@
     resize: none;
 }
 
-
-/*.cambiar_imagen{
+.cambiar_imagen{
 display: grid;
 grid-template-rows: 50% 50%;
 border: none;
-}*/
+}
+
 .Modific_imagen{
     display: flex;
     flex-direction: row;
@@ -99,18 +98,12 @@ border: none;
     width: 200px;
     height: 200px;
 }
-.boton_cimg{
-    margin-top: 24px;
-    border: 3px solid;
-    border-radius: 7px;
-    width: 240px;
-    height: 40px;
-    
-}
+
+
 .optiones_button input{
     margin-top: 90px;
     display:grid;
-    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
     margin-right: 150px;
     
     width: 240px;
@@ -119,8 +112,8 @@ border: none;
 
 .optiones_button {
     display:grid;
-    grid-template-columns: 50% 50%;  
-    margin-top:100px;
+    grid-template-columns: 50% 50%; 
+    margin-top: 9vh; 
 }
 
 .Guardar {
@@ -128,7 +121,7 @@ border: none;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 20px;
     font-weight: bold;
-    width: 360px;
+    width: 77%;
     height: 50px;
     border: 1px solid;
     border-radius: 7px;
@@ -143,7 +136,7 @@ border: none;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 20px;
     font-weight: bold;
-    width: 360px;
+    width: 77%;
     height: 50px;
     border: 1px solid;
     border-radius: 7px;
@@ -158,29 +151,64 @@ border: none;
     box-shadow: #0000 0px 2px;
     background-color: #45A0AC;
 }
+
 .Cancelar:hover{
     box-shadow: #0000 0px 2px;
     background-color: #45A0AC;
 }
 
-.butimg{
+
+div.botonimagen{
+    text-align: center;
+    margin-top: 24px;
+    border: 1px solid;
+    border-color: #000;
+    border-radius: 7px;
     width: 277px;
     height: 50px;
-    display: inline-block;
+    position:relative;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    cursor:pointer;
+    background-color: #F49549 ;
+}
+
+div.botonimagen p{
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+input.fot{
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    width:100%;
+    height:100%;
+    opacity: 0;
+    cursor:pointer;
+   color: #ffffff;
+}
+.butimg{
+    width: 32.5%;
+    height: 50px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
      border-radius: 7px;
      cursor: pointer;
-     color: #000;
+     color: #ffffff;
      font-size: 30px;
      background-color: #F49549;
-     margin-top:50px;
-    }
-    .foto{
+     margin-top:4vh;
+}
+.foto{
         display: none;
-    }
+ }
 .butimg p {
         text-align: center;
        padding-top: 3px; 
     }
-
-    
-
