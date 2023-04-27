@@ -13,11 +13,6 @@
     
 }
 
-.alerta{
-    color: red;
-    margin: 0;
-}
-
 .divinput {
     margin-bottom: 35px;
     margin-top: 15px;
@@ -35,6 +30,10 @@ input , label{
 }
 input{
     margin-top: 10px;
+    font-size: 16px;
+}
+.Categoria input{
+    font-size: 16px;
 }
 .contenedor_general{
     font-family: 'Nunito Sans', sans-serif;
@@ -71,7 +70,7 @@ input{
 
 .cont_der{
     margin-left: -34%;
-}
+}  
 
 .Descripcion{
     border: 1px solid;
@@ -84,7 +83,7 @@ input{
     font-weight: lighter;
     resize: none;
 }
-
+ 
 .cambiar_imagen{
 display: grid;
 grid-template-rows: 50% 50%;
@@ -191,19 +190,19 @@ input.fot{
     opacity: 0;
     cursor:pointer;
    color: #ffffff;
-}
+} 
 .butimg{
     width: 32.5%;
     height: 50px;
     display: flex;
-  align-items: center;
-  justify-content: center;
-     border-radius: 7px;
-     cursor: pointer;
-     color: #ffffff;
-     font-size: 30px;
-     background-color: #F49549;
-     margin-top:4vh;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 30px;
+    background-color: #F49549;
+    margin-top:4vh;
 }
 .foto{
         display: none;
@@ -211,4 +210,9 @@ input.fot{
 .butimg p {
         text-align: center;
        padding-top: 3px; 
+    }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none; 
+        margin: 0; 
     }
