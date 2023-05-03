@@ -59,10 +59,10 @@ const validateInputs = () => {
     const archivos = $seleccionArchivos.files;
     //fecha
     var today = new Date();
+    today.setHours(0, 0, 0, 0);
     var inputDate = new Date(document.getElementById("fecha").value);
 
     let res = true;
-
     if(nombreproductoValue === ''){
         setError(nombreproducto, '*Campo obligatorio');
         res = false;
@@ -73,7 +73,15 @@ const validateInputs = () => {
       setError(nombreproducto, '*El campo debe tener más de 2 caracteres y solo alfabéticos');
       res = false;
     }else{
-        setSuccess(nombreproducto);
+      if (productos !== null && productos !== undefined) {
+        var producto = nombreproductoValue.toLowerCase();
+        if (productos.includes(producto)) {
+          setError(nombreproducto, '*Producto ya registrado');
+          res = false;
+        } else {
+            setSuccess(nombreproducto);
+        }  
+      }
     }
     ///// validacion venta
     if (ventaValue === '') {
@@ -132,7 +140,7 @@ const validateInputs = () => {
         }
       }
     //// validacion fecha
-    if (inputDate <= today) {
+    if (inputDate < today) {
         setError(fecha, '*Fecha no permitida');
         res = false;
     }else{
@@ -204,7 +212,5 @@ document.addEventListener("DOMContentLoaded", function() {
   const objectURL = URL.createObjectURL(primerArchivo);
   // Y a la fuente de la imagen le ponemos el objectURL
   $imagenPrevisualizacion.src = objectURL;
-  });
 });
-
-
+});
