@@ -107,12 +107,14 @@ include_once 'back/datos_un_producto1.php';
             </section>
             <div class="container-modal">
                 <div class="modal" id="jha" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <h6>Esta seguro que desea</h6>
+                    <h6>¿Está seguro que desea</h6>
                     <h6>eliminar el producto?</h6>
-                    <button class="elimin"
-                        onclick="location.href ='eliminar_producto.php?id_producto=<?php echo $producto['ID_PRODUCTO'];?>&direccion=<?php echo $direccion;?>'">Eliminar</button>
-                    <button class="cancelar"
-                        onclick='document.getElementsByClassName("container-modal")[0].style.display = "none"'>Cancelar</button>
+                    <div class="botones">
+                        <button class="elimin"
+                            onclick="location.href ='eliminar_producto.php?id_producto=<?php echo $producto['ID_PRODUCTO'];?>&direccion=<?php echo $direccion;?>'">Eliminar</button>
+                        <button class="cancelar"
+                            onclick='document.getElementsByClassName("container-modal")[0].style.display = "none"'>Cancelar</button>
+                    </div>
                 </div>
             </div>
             <!-- FIN DEL CONTENIDO -->
