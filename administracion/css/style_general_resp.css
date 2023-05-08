@@ -1,56 +1,279 @@
-@media screen and (max-width:768px){
-  
-    .contenedor_general{
-        display:grid;
-        grid-template-rows: 50% 50%; 
-        grid-template-columns: none; 
+@media screen and (max-width: 768px) {
+    .lado-izquierdo {
+        position: fixed;
+        z-index: 1;
+        left: -190px;
     }
-    
-    .cont_der , .cont_iz{
-        margin-left: 12%;
+    .menu-gif {
+        width: 100px;
+        height: 106px;
+        margin: 0 auto;
     }
-    .Nombre_prod , .Precio_c , .Precio_v , .Nac , .Cant , .Categoria{
-        width: 84%;
-    }
-    .Descripcion {
-        width: 77%;
-    }
-    .optiones_button {  
-        margin-top: 0vh;
-    }
-    .butimg{
+    .detalle-gif-movil {
         width: 50%;
     }
-    p{
-        font-size: 20px;
+    h1 {
+        font-size: 18px;
     }
-
+    h2 {
+        font-size: 13px;
+    }
+    .t11 {
+        width: 30px;
+    }
+    .t22 {
+        width: 20px;
+    }
+    h3 {
+        font-size: 10px;
+    }
+    .menu-content-subarea>a>h3 {
+        width: 120px;
+        margin: 0 0 0 10px;
+    }
+    .menu-content-area>h2 {
+        width: 100px;
+    }
+    .lado-izquierdo {
+        flex: unset !important;
+    }
+    .menu-content-area {
+        margin: 8px 10px;
+    }
+    .vender-contenido {
+        flex-direction: column-reverse;
+    }
+    .titulo-detalle {
+        height: auto !important;
+    }
+    .vender-detalle-lleno {
+        align-self: unset !important;
+        flex: unset !important;
+        margin-bottom: 25px;
+        position: fixed;
+        top: 175px;
+        right: -90%;
+        z-index: 1;
+        width: 90%;
+    }
+    .detalle-gestor {
+        display: block !important;
+    }
+    p {
+        font-size: 12px;
+    }
+    .detalle-gif {
+        margin: 50px auto !important;
+    }
+    .vender-productos {
+        margin: 0 0 20px 0 !important;
+        flex: unset !important;
+    }
+    .fila {
+        font-size: 16px !important;
+    }
+    .detalle-total {
+        padding: 15px 15px !important;
+    }
+    .boton-registrar-venta {
+        font-size: 16px !important;
+    }
+    .detalle-total .boton-cancelar-registro-venta {
+        width: 50px !important;
+        font-size: 16px !important;
+    }
+    .item .selector-cantidad {
+        margin: 0 !important;
+    }
+    .contenedor-items {
+        font-size: 12px !important;
+    }
+    .item .item-precio {
+        font-size: 12px !important;
+    }
+    .gestionar-menu-icono {
+        display: block;
+    }
+    .detalle-gestor {
+        display: block;
+        position: absolute;
+        top: -2px;
+        left: -40px;
+    }
+    .lista-productos {
+        max-height: 622px !important;
+    }
+    .footer > p {
+        font-size: 14px;
+    }
 }
-@media screen and (max-width:1440px){
-  
-    .contenedor_general{
-        display:grid;
-        grid-template-rows: 50% 50%; 
-        grid-template-columns: none; 
+
+@media screen and (max-width: 768px) {
+    .main-contenido {
+        display: flex;
+        flex-direction: column;
     }
-    
-    .cont_der , .cont_iz{
+    .contenido {
+        height: unset !important;
+        padding: 15px 0 !important;
+    }
+    .header {}
+    .inputButton input {
+        width: 80% !important;
+    }
+    .inputButton select {
+        width: 80% !important;
+    }
+    .inputButton .descripcion {
+        width: 80% !important;
+    }
+    .container {
+        margin-right: 0 !important;
+    }
+    .der {
+        margin-left: 0 !important;
+    }
+    .izq {
+        margin-left: 0 !important;
+    }
+    .botones {
+        width: 100%;
+    }
+    .botones .boton {
+        margin-right: 0;
+    }
+    .botonCR {
+        display: flex !important;
+        justify-content: space-between;
+    }
+    .botonCR button {
+        padding: 13px 10% !important;
+        margin-right: 0;
+    }
+    .botonCR a {
+        padding: 13px 10% !important;
+        margin-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .botonCR button {
+        padding: 13px 5% !important;
+    }
+    .botonCR a {
+        padding: 13px 5% !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .contenedor_general {
+        display: grid;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: none;
+    }
+    .cont_der,
+    .cont_iz {
         margin-left: 12%;
     }
-    .Nombre_prod , .Precio_c , .Precio_v , .Nac , .Cant , .Categoria{
+    .Nombre_prod,
+    .Precio_c,
+    .Precio_v,
+    .Nac,
+    .Cant,
+    .Categoria {
         width: 84%;
     }
     .Descripcion {
         width: 77%;
     }
-    .optiones_button {  
+    .optiones_button {
         margin-top: 0vh;
     }
-    .butimg{
+    .butimg {
         width: 50%;
     }
-    p{
+    p {
         font-size: 20px;
     }
+    .cont_der {
+        margin-top: 40px;
+    }
+}
 
+@media screen and (max-width:1440px) {
+    .contenedor_general {
+        display: grid;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: none;
+    }
+    .cont_der,
+    .cont_iz {
+        margin-left: 12%;
+    }
+    .Nombre_prod,
+    .Precio_c,
+    .Precio_v,
+    .Nac,
+    .Cant,
+    .Categoria {
+        width: 84%;
+    }
+    .Descripcion {
+        width: 77%;
+    }
+    .optiones_button {
+        margin-top: 0vh;
+    }
+    .butimg {
+        width: 50%;
+    }
+    p {
+        font-size: 20px;
+    }
+    .cont_der {
+        margin-top: 40px;
+    }
+}
+
+
+/*Tabla de productos*/
+
+@media screen and (max-width:768px) {
+    .tabla1 {
+        max-width: 85vw;
+    }
+    th {
+        font-size: 20px !important;
+    }
+    .container {
+        flex-direction: column !important;
+        align-items: center!important;
+    }
+    #mi22 {
+        margin: auto !important;
+    }
+    .tarjeta {
+        width: 75% !important;
+        height: unset !important;
+    }
+    .nombrep {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .tabla51 {
+        max-height: unset !important;
+    }
+}
+
+
+/* detalledeproducto*/
+
+@media screen and (max-width: 425px) {
+    .modal {
+        width: 280px !important;
+        height: 320px !important;
+    }
+    .cancelar {
+        width: 115px;
+    }
 }
