@@ -29,7 +29,7 @@ include_once 'back/datos_un_producto1.php';
                             <tr>
 
                                 <div id="mi22" style="position: relative;">
-                                    <img class="tarjeta" src="<?php echo $producto['IMAGEN_PRODUCTO']; ?>"
+                                    <img class="tarjet" src="<?php echo $producto['IMAGEN_PRODUCTO']; ?>"
                                         alt="imagen no encontrada"
                                         onerror="this.onerror=null;this.src='src/sinimagen.jpg';"
                                         style="border-radius: 5px; border: 20px solid #3A5864; margin: 10px">
