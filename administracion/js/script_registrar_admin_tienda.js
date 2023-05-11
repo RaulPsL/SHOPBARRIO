@@ -7,9 +7,19 @@ document.addEventListener("DOMContentLoaded", function() {
     
     const formularioAdmin=document.querySelector(".formulario_admin")
     const formularioTienda=document.querySelector(".formulario_tienda")
-    
 
- 
+    document.getElementById('telefono').addEventListener('keydown',
+        function(event){
+            if(event.key === '+' || 
+            event.key === 'e' || 
+            event.key === '-' || 
+            event.key === 'E' || 
+            event.key === ',' || 
+            event.key === '.'){
+                event.preventDefault();
+            }
+        }        
+    )
 
     /* GENERAL */
 
@@ -50,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
     /* FIN TIENDA */
 })
    /* CAMPOS ADMINISTRADOR */
+
 const validateInputs = () => {
     const formulario = document.getElementById('formulario');
     const nombre = document.getElementById('nombre');
@@ -58,13 +69,39 @@ const validateInputs = () => {
     const telefono = document.getElementById('telefono');
     const confpass = document.getElementById('password2');
     
-    const nombreValue = nombre.value;
-    const passwordValue = document.getElementById('password').value;
-    const confpassValue = document.getElementById('password2').value;
+    const divErros = document.getElementById('error_nombre');
+
+    const nombreValue = nombre.value.toLowerCase();
+    const passwordValue = password.value;
+    const confpassValue = confpass.value;
     const emailValue = email.value;
-    const telefonoValue = telefono.value;
+    const telefonoValue = telefono.value.trim();
     
     let res = true;
+    let res2 = false;
+    
+    /*let res3 = true;
+
+    const dir = 'back/datos_registrar_admin.php?user='+nombreValue;
+    const consulta = new XMLHttpRequest();
+    consulta.open('GET', dir);
+    consulta.send();
+    var datosusuario = JSON.parse(consulta.responseText);
+    */
+    console.log(variable_nombre);
+    
+    /*let array_names = [];
+    const response_fetch = fetch('back/datos_registrar_admin.php')
+                        .then(response => response.json())
+                        .then(data => {
+                            res3 = console.log(data);
+                            if(data.includes(nombreValue)){
+                                setError(nombre, '*El usuario ya existe.')
+                            }else{
+                                setSuccess(nombre);
+                            }
+                        });
+    */
 
     if(nombreValue === ''){
         setError(nombre, '*Campo obligatorio');
@@ -72,46 +109,58 @@ const validateInputs = () => {
     }else if(nombreValue.length > 15){
         setError(nombre, '*La longitud máxima del usuario es de 15 caracteres.');
         res = false;
-    }else if(!/^[a-zA-Z0-9\s]+$/.test(nombreValue)){
-        setError(nombre, '*El campo debe tener más de 2 caracteres y solo alfabéticos');
+    }else if (nombreValue.length < 5) {
+        setError(nombre, '*La longitud mínima del usuario es de 5 caracteres.');
         res = false;
-    }else{
+    } else if(!/^[a-zA-Z0-9\s]+$/.test(nombreValue)){
+        setError(nombre, '*El campo debe tener caracteres alfabéticos.');
+        res = false;
+    } else if(variable_nombre.includes(nombreValue)){
+        setError(nombre, '*El usuario ya existe.');
+        res = false;
+    } else {
         setSuccess(nombre);
     }
+
+    
 
     if (passwordValue === "") {
         setError(password, '*Campo obligatorio');
         res = false;
-    } else if (passwordValue < 8) {
+    } else if (passwordValue.length < 8) {
         setError(password, '*La longitud mínima de la contraseña es de 8 caracteres.');
         res = false;
-    } else if (passwordValue > 16) {
+    } else if (passwordValue.length > 16) {
         setError(password, '*La longitud máxima de la contraseña es de 16 caracteres.');
         res = false;
-    }else {
+    } else {
+        res2 = true;
         setSuccess(password);
     }
 
     if (confpassValue === "") {
         setError(confpass, '*Campo obligatorio');
         res = false;
-    } else if (confpassValue < 8) {
+    } else if (confpassValue.length < 8) {
         setError(confpass, '*La longitud mínima de la confirmacion es de 8 caracteres.');
         res = false;
-    } else if (confpassValue > 16) {
+    } else if (confpassValue.length > 16) {
         setError(confpass, '*La longitud máxima de la contraseña es de 16 caracteres.');
         res = false;
     } else {
+        res2 = true;
         setSuccess(confpass);
     }
-
-    if(confpassValue !== passwordValue){
-        setError(confpass, "*Las contraseñas no coinciden.");
-        setError(password, "*Las contraseñas no coinciden.");
-        res = false;
-    } else {
-        setSuccess(confpass);
-        setSuccess(password);
+    
+    if(res2 !== false) {
+        if(confpassValue !== passwordValue){
+            setError(confpass, "*Las contraseñas no coinciden, intente de nuevo.");
+            setError(password, "*Las contraseñas no coinciden, intente de nuevo.");
+            res = false;
+        } else {
+            setSuccess(confpass);
+            setSuccess(password);
+        }
     }
 
     if(emailValue === ''){
@@ -124,17 +173,15 @@ const validateInputs = () => {
         setSuccess(email);
     }
 
+
     if (telefonoValue === '') {
         setError(telefono, '*Campo obligatorio');
         res = false;
-    } else if (!/^[0-9]/.test(telefonoValue)) {
-        setError(telefono, '*El campo debe tener solo numeros.');
+    } else if (telefonoValue.length != 7) {
+        setError(telefono, '*Solo se permite números con 7 digitos.');
         res = false;
-    } else if (telefonoValue > 79999999) {
-        setError(telefono, '*Solo se permite numeros con maximo 8 digitos.');
-        res = false;
-    } else if (telefonoValue < 499999) {
-        setError(telefono, '*Solo se permite numeros con minimo 6 digitos.');
+    } else if (!/^[4]/.test(telefonoValue) || !/^[2]/.test(telefonoValue)) {
+        setError(telefono, '*El campo debe comenzar con 4 o 2.');
         res = false;
     } else {
         setSuccess(telefono);
@@ -152,13 +199,15 @@ const setError = (element,message) => {
 
     errorDisplay.innerText = message;
     inputControl.classList.add('error');
+    return res = false;
 }
 const setSuccess = element => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error-admin');
 
     errorDisplay.innerText = '';
-    inputControl.classList.remove('error');
+    inputControl.classList.add('error');
+    return res = true;
 }
    /* FIN CAMPOS ADMINISTRADOR */
    
