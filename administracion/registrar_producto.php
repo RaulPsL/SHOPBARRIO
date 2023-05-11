@@ -1,7 +1,14 @@
+<?php include_once 'credenciales.php'; ?>
+<?php include_once 'back/datos_nombres_producto.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
         <?php include_once 'head.php'; ?>
+        <style type="text/css">
+            textarea {
+                    resize : none;
+              }            
+        </style>
     </head>
     <body>
         <div class="izquierda-derecha">
@@ -17,6 +24,7 @@
                 <main class="principal">
                         <section class="contenido">
                             <section class="seccion">
+
                                 <form action="back/datos_registrar.php"  id="formulario" method="post" enctype="multipart/form-data" onsubmit="return validate()" novalidate>
                                     <div class="main-contenido">
                                         <div class="container izq">
@@ -37,7 +45,7 @@
                                             </div>
                                             <div class="inputButton">
                                                 <label for="">Fecha Vencimiento</label>
-                                                <input type="date" name="fecha" id="fecha">
+                                                <input type="date" name="fecha" id="fecha" pattern="\d{4}-\d{2}-\d{2}" min=<?php $hoy=date("Y-m-d"); echo $hoy;?> />
                                                 <div class="error"></div> 
                                             </div>
                                             <div class="inputButton categoria">
@@ -80,15 +88,16 @@
                                             </div>
                                             <div class="botones">
                                                 <div class="boton">                                                    
-                                                    Subir imagen<input class="subir" id="subir" name="subir"  type="file">                             
+                                                    Subir imagen<input class="subir" id="subir" name="subir"  type="file" accept="image/jpeg, image/png">                             
                                                 </div>
                                                 <div class="botonCR">
-                                                <a href="https://shopbarrio.online/administracion/mostrar_productos" class="Botones" >Cancelar</a>
+                                                <a href="mostrar_productos" class="Botones" >Cancelar</a>
                                                 <button class="Botones" type="submit" id="btnRegistrar">Registrar</button>  
-                                                </div>                             
+                                                </div>                                       
                                             </div>                        
                                         </div>
-                                    </div>                                       
+                                    </div> 
+
                                 </form>                  
                             </section>
                         </section>
