@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Registrar proveedor</title>
+         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Nunito+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./stylesheet.css">
+    </head>
+       
+    <body>
+                <!-- AQUI SE DEBE COLOCAR EL CONTENIDO DE LA PAGINA -->
+                <!-- INICIO DEL CONTENIDO -->
+                <section name="contenido-pagina">
+                    <div id="pantalla-dividida" class="pantalla-dividida">
+                      <div class="izquierda">
+                        <form action="./registrar.php" method="post" id="formulario">
+                          <div class="main-contenido">
+                            <div class="container">
+                              <div class="inputButton nombreproveedor">
+                                <label for="nombreproveedor">Nombre del proveedor</label>
+                                <input type="text" name="nombre" id="nombreproveedor" placeholder="Ingrese nombre del proveedor">
+                                <p></p>
+                              </div>
+                              <div class="inputButton telefono">
+                                <label for="telefono">Teléfono del proveedor</label>
+                                <input type="number" name="telefono" id="telefono" placeholder="xxx-xxx-xx">
+                                <p></p>
+                              </div>
+                            </div>
+                            <div class="inputButton">
+                              <label for="email" class="correoelectronico">Email del proveedor</label>
+                              <input type="email" id="email" name="email" placeholder="empresa@dominio.com">
+                              <div class="error"></div>
+                            </div>
+                            <div class="inputButton">
+                              <label for="nombreempresa">Nombre de la empresa</label>
+                              <input type="text" name="empresa" id="nombreempresa" placeholder="empresa patito">
+                              <p></p>
+                            </div>
+                            <div class="container">
+                              <div class="inputButton">
+                                <label for="descripcion">Descripción</label>
+                                <textarea class="descripcion" name="descripcion" id="descripcion" cols="120" rows="4" maxlength="250" placeholder="Descripción de los productos que trae el proveedor "></textarea>
+                              </div>
+                              <div class="inputButton">
+                                <div class="boton">
+                                </div>
+                                <button type="reset">Cancelar</button>
+                                <button type="submit" id="btnRegistrar">Registrar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="derecha">
+                        <img class="imagenusuario" src="src/gifauto.gif" alt="">
+                      </div>
+                    </div>
+                  </section>
+                  
+                
+                <!-- FIN DEL CONTENIDO -->
+            </section>
+        </div>
+        <section name="footer">
+            <script src="./main.js"></script>
+             
+        </section>
+    </body>
+</html>
