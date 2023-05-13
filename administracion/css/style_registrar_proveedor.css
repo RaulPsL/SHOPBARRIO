@@ -1,0 +1,114 @@
+.contenido {
+    height: 83.9vh;
+    width: 97%;
+    padding: 15px 15px 10px 15px;
+}
+  
+.main-contenido {
+    display: flex;
+}
+.container{
+    margin-right: 150px;
+}
+.inputButton {
+    margin-bottom: 35px;
+    margin-top: 15px;
+}
+.inputButton label{
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+}
+.inputButton input{
+    border-radius: 20px;
+    border: 1px solid #808080;
+    height: 50px;
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 5px;   
+    box-sizing: border-box; 
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    
+}
+ 
+.inputButton .error input {
+    border-color: #ff3860;
+}
+
+.inputButton .descripcion {
+    border-radius: 20px;
+    border: 1px solid #808080;
+    padding: 15px;
+    width: 500px;
+    height: 80px;
+    font-family: 'Nunito Sans', sans-serif; 
+    font-size: 16px;
+
+}
+.main-contenido p {
+    color: red;
+    font-size: 14.4px;
+    margin-top: 6px;
+}
+.botones {
+    display: inline-block;
+}
+.inputButton a{
+    color: #FFFFFF;
+    border-radius: 20px; 
+    padding: 13px 95.3px; 
+    background-color: #E76F51;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 95px; 
+    padding-bottom: 13px;
+    padding-top: 11.510;
+    padding-left: 94.300;
+    text-align: center;
+    
+}
+
+.botones a:hover{
+  
+    cursor: pointer;
+}
+.boton {
+    margin-bottom: 40px;
+}
+
+.inputButton .registrarbutton {
+    
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;    
+    margin-right: 150px;
+    padding: 13px 95.3px;
+    border: 1px solid #2A9D8F;
+    background-color: #2A9D8F;
+    font-family: 'Nunito Sans', sans-serif; 
+    font-size: 20px;
+}
+.botones button:hover {
+    
+    cursor: pointer;
+}
+
+
+.inputButton .error {
+    color: #ff3860;
+    font-size: 14.4px;
+    height: 1px;
+}
+.izquierda {
+    margin-left: 47px;
+}
+.derrecha{
+    margin-left: 16.23px;
+}
+.botonCR {
+    margin-top: 120px;
+}
