@@ -1,0 +1,134 @@
+.contenido {
+    height: 83.9vh;
+    width: 97%;
+    padding: 15px 15px 10px 15px;
+}  
+.pantalla-dividida {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.izq {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+.container-input {
+    margin-bottom: 35px;
+    margin-top: 15px;
+}
+.container-input label{
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+}
+.container-input input{
+    border-radius: 20px;
+    border: 1px solid #808080;
+    height: 50px;
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 5px;   
+    box-sizing: border-box; 
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;    
+} 
+.container-input .descripcion {
+    border-radius: 20px;
+    border: 1px solid #808080;
+    padding: 15px;
+    width: 500px;
+    height: 80px;
+    font-family: 'Nunito Sans', sans-serif; 
+    font-size: 16px;
+    resize: none;
+
+}
+.container-input .error {
+    color: red;
+    font-size: 14.4px;
+    margin-top: 6px;
+}
+.seccion-botones {
+    display: flex;
+    gap: 40px;
+}
+.seccion-botones a{
+    display: flex;
+    color: #FFFFFF;
+    border-radius: 20px; 
+    background-color: #E76F51;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px; 
+    width: 242px;
+    height: 45px;
+    text-align: center;   
+    align-items: center;
+    justify-content: center; 
+}
+.seccion-botones a:hover{ 
+    cursor: pointer;
+}
+.seccion-botones .registrarbutton {    
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;    
+    margin-right: 150px;
+    width: 242px;
+    height: 45px;
+    border: 1px solid #2A9D8F;
+    background-color: #2A9D8F;
+    font-family: 'Nunito Sans', sans-serif; 
+    font-size: 20px;
+}
+.registrarbutton:hover {   
+    cursor: pointer;
+}
+.der{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 12px;
+    }
+    .main-contenido {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido {
+        height: unset !important;
+        padding: 15px 0 !important;
+    }
+    .container-input input {
+        width: 80% !important;
+    }    
+    .container-input .descripcion {
+        width: 80% !important;
+    }
+    .der {
+        display: none;
+    }
+    .izq {
+        margin-left: 0 !important;
+    }
+    .seccion-botones {
+        width: 100%;
+    }
+    .seccion-botones {
+        display: flex !important;
+        justify-content: space-between;
+    }
+    .seccion-botones .registrarbutton {
+        padding: 13px 10% !important;
+        margin-right: 0;
+    }
+    .seccion-botones a {
+        padding: 13px 10% !important;
+        margin-right: 0 !important;
+    }
+}
