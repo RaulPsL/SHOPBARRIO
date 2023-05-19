@@ -1,0 +1,91 @@
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28px;
+    margin-bottom: 25px;
+}
+
+th,
+td {
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+}
+
+tbody>tr>td {
+    font-size: 16px;
+}
+
+td {
+    color: #3d3d3d;
+}
+
+th {
+    border-right: 1px solid #fff;
+    padding: 8px;
+}
+
+th:last-child {
+    border-right: none;
+}
+
+tbody tr {
+    background-color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #D2D2D2;
+}
+
+thead {
+    background-color: #254653;
+    color: white;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+.labels-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.total {
+    display: flex;
+    justify justify-content: center;
+    align-items: center;
+    background-color: #E76F51;
+    border-radius: 0 16px 0 16px;
+    padding: 5 0 5 10px;
+    width: 200px;
+    height: 30px;
+    color: #ffffff;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.total h4 {
+    margin: 10px 10px;
+}
+
+.cantidad {
+    display: flex;
+    justify justify-content: center;
+    align-items: center;
+    background-color: #2A9D8F;
+    border-radius: 0 16px 0 16px;
+    padding: 5 0 5 20px;
+    width: 190px;
+    height: 30px;
+    color: #ffffff;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.cantidad h4 {
+    margin: 10px 10px;
+}
