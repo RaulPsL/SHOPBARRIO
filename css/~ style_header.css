@@ -1,0 +1,43 @@
+.izquierda-derecha{
+    display: flex;
+    min-height: 96.93vh;
+}
+.lado-izquierdo{
+    flex: 0 1 280px;
+    background-color: #254653;
+}
+.lado-izquierdo-mostrar{
+    left: 0 !important;
+}
+.lado-derecho{
+    flex: 1;
+    margin: 0 40px;
+}
+.header{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-titulo{
+
+}
+.header-usuario{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.usuario-sesion{
+    width: max-content;
+}
+a {
+    text-decoration: none;
+  }
+.usuario-sesion p{
+    margin: 0;
+}
+.usuario-sesion a{
+    margin: 0;
+    color: #ff0000;
+    font-weight: 600;
+}
