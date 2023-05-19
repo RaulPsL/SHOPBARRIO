@@ -30,7 +30,7 @@ $ventasreal1=$_SESSION['ventas1'];
                 <div class="lista_vacia">
                     <img src="src/img-hacia-arriba.png" class="imagen_flecha">
                     <div class="detalle-ventasgif">
-                        <img src="src/ventas.gif" class="gif2">
+                        <img src="src/ventas.gif" class="gif222">
                     </div>
                     <p style="font-size: 22px; text-align: center;">¿Qué tal registrar tu primera venta? </p>
                 </div>
