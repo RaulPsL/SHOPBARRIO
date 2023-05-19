@@ -89,3 +89,104 @@ thead {
 .cantidad h4 {
     margin: 10px 10px;
 }
+/*
+PAGINA: DETALLE  TODAS VENTAS
+MEDIDAS:
+    360-480
+    481-768
+    769-1024
+    1025-1440
+    1445-1920
+INICIO
+#################################################################
+#################################################################
+*/
+
+@media screen and (min-width: 360px) and (max-width: 480px) {
+    .labels-container {
+        max-width: 100%;
+        display: initial;
+    }
+    .cantidad {
+        margin-top: 10px;
+    }
+    .table-container {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        overflow-x: auto;
+    }
+    table {
+        min-width: 100%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .labels-container {
+        max-width: 100%;
+        display: initial;
+    }
+    .cantidad {
+        margin-top: 10px;
+    }
+    .tabla2 {
+        margin-top: 10%;
+        margin-left: 2%;
+        margin-left: 20px;
+        min-width: 100%;
+    }
+    .table-container {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        overflow-x: auto;
+        min-width: 100%;
+    }
+    table {
+        min-width: 100%;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 1025px) {
+    .tabla2 {
+        margin-top: 5%;
+        margin-left: 0%;
+        margin-left: 5px!important;
+        min-width: 100%;
+    }
+    .table-container {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        overflow-x: auto;
+        min-width: 100%;
+    }
+    table {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .tabla2 {
+        max-width: 85vw;
+        margin-left: -4%;
+        min-width: 100%;
+    }
+    .tabla2 {
+        max-height: unset !important;
+        min-width: 100%;
+    }
+}
+
+
+/*
+#################################################################
+#################################################################
+PAGINA: DETALLE  TODAS VENTAS
+MEDIDAS:
+    360-480
+    481-768
+    769-1024
+    1025-144
+    1445-1920
+FIN
+#################################################################
+#################################################################
+*/
