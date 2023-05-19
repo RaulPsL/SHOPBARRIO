@@ -1,0 +1,99 @@
+body {
+    background: #f2f2f2;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.login-form {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    height: 89.6vh;
+}
+
+
+h2 {
+    text-align: center;
+    color: #254653;
+    font-size: 28px;
+}
+.error{
+    text-align: center;
+    color: red;
+    margin: 0;
+}
+.input-fields {
+    width: 50%;
+    margin: 0px auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.input-fields label {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #254653;
+}
+
+.input-fields input[type="text"],
+input[type="password"] {
+    color: #434343;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #434343;
+    outline: none;
+}
+
+.input-fields input::placeholder {
+    color: #d9d9d9;
+    font-size: 18px;
+}
+
+.boton-enviar {
+    display: block;
+    text-align: center;
+}
+
+.boton-enviar .login-button {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background: #2A9D8F;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 158px;
+    height: 47px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 20%;
+    margin: 0px auto;
+    text-align: center;
+    align-items: center;
+}
+
+.button-container .cancel-button,
+.register-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container .cancel-button,
+a {
+    font-weight: bold;
+    margin-left: 5px;
+    color: #2F88FF;
+    text-decoration: underline;
+}
