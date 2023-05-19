@@ -1,0 +1,192 @@
+  /*venta vacio*/
+  
+  .list-vacia {
+      background-color: #F7F7F8;
+  }
+  
+  .imagen_flecha {
+      margin-left: 85%;
+      width: 125px;
+  }
+  
+  .gif2 {
+      width: 350px;
+      height: 350px;
+      display: block;
+      margin: 0 auto;
+  }
+  
+  .detalle-ventasgif {
+      filter: brightness(1.1);
+      mix-blend-mode: multiply;
+  }
+  /*lista_llena*/
+  
+  table {
+      border-collapse: collapse;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 25px;
+  }
+  
+  th,
+  td {
+      font-size: 18px;
+      padding: 10px;
+      text-align: center;
+  }
+  
+  tbody>tr>td {
+      font-size: 16px;
+  }
+  
+  td {
+      color: #3d3d3d;
+      padding: 10px;
+      text-align: center;
+  }
+  
+  th {
+      border-right: 1px solid #fff;
+      padding: 8px;
+  }
+  
+  th:last-child {
+      border-right: none;
+  }
+  
+  tbody tr {
+      background-color: #ffffff;
+      cursor: pointer;
+  }
+  
+  tbody tr:hover {
+      background-color: #9dc9c4;
+  }
+  
+  tr:nth-child(even) {
+      background-color: #D2D2D2;
+  }
+  
+  thead {
+      background-color: #254653;
+      color: white;
+  }
+  
+  .total_venta {
+      background: #E76F51;
+      border-radius: 0 16px 0 16px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 25px;
+      width: 240px;
+      height: 40px;
+  }
+  
+  .total_venta h4 {
+      margin: 10px 10px;
+  }
+  
+  .boton_tven {
+      display: flex;
+      background-color: #2A9D8F;
+      cursor: pointer;
+      color: #FFFFFF;
+      border-radius: 5px;
+      padding: 0px 0px;
+      font-weight: bold;
+      width: 240px;
+      height: 40px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+  }
+  
+  .boton_tven:hover {
+      background-color: #7ec0b8;
+  }
+  
+  .boton_tven>h1 {
+      width: 0px;
+      color: #FFFFFF;
+      margin: 10px;
+      padding: 0;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+  }
+  
+  .boton_tven h1 {
+      white-space: nowrap;
+  }
+  
+  .btones {
+      display: flex;
+      max-width: 100%;
+  }
+  
+  .list {
+      width: 23px;
+      margin: 8px;
+  }
+  
+  @media screen and (min-width: 360px) and (max-width: 480px) {
+      .total_venta h4 {
+          margin: 10px 10px;
+          background: #E76F51!important;
+          border-radius: 0 16px 0 16px !important;
+          color: #ffffff !important;
+          text-align: center !important;
+          line-height: 25px!important;
+          width: 240px!important;
+          height: 40px!important;
+      }
+      .btones {
+          display: initial;
+          max-width: 100%;
+      }
+      .imagen_flecha {
+          margin-left: 65%;
+          width: 80px;
+      }
+      .gif2 {
+          width: 220px;
+          height: 220px;
+          display: block;
+          margin: 0 auto;
+      }
+  }
+  
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+      .total_venta h4 {
+          margin: 10px 10px;
+          background: #E76F51!important;
+          border-radius: 0 16px 0 16px !important;
+          color: #ffffff !important;
+          text-align: center !important;
+          line-height: 25px!important;
+          width: 240px!important;
+          height: 40px!important;
+      }
+      .btones {
+          max-width: 100%;
+          display: initial;
+      }
+      .imagen_flecha {
+          margin-left: 70%;
+          width: 90px;
+      }
+      .gif2 {
+          width: 250px;
+          height: 250px;
+          display: block;
+          margin: 0 auto;
+      }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+      .imagen_flecha {
+          margin-left: 80%;
+          width: 125px;
+      }
+  }
