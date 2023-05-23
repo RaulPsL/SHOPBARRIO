@@ -45,10 +45,17 @@ $ventasreal1=$_SESSION['ventas1'];
                     <div class="container">
                      <section class="btones">
                         <label class="total_venta">
-                            <h4>Total Ventas: Bs.
+                            <h4>Total Vendido: Bs.
                                 <?php echo $suma_realizados; ?>
                             </h4>
                         </label>
+
+                        <label class="cat_venta">
+                            <h4>Ventas registradas:
+                                <?php echo $cantidad_ventas; ?>
+                            </h4>
+                        </label>
+
                         <div class="boton_todo_venta">
                             <div class="boton_tven"  onclick="location.href='mostrar_detalle_todas_ventas.php'">
                                 <img src="src/list.svg" class="list">
