@@ -25,12 +25,12 @@ $dettodventas4=$_SESSION['dettodventa2'];
             
             <div class="labels-container">
                 <label class="total">
-                    <h4>Total Ventas: Bs.
+                    <h4>Total Vendido: Bs.
                         <?php echo $suma_subtotal; ?>
                     </h4>
                     </label>
                     <label class="cantidad cantidad-label">
-                        <h4>Cantidad: #
+                        <h4>Productos vendidos:
                             <?php echo $cantidad_det_tod_ventas ; ?>
                         </h4>
                         </label>
