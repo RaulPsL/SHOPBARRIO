@@ -27,12 +27,12 @@ $detventas3=$_SESSION['detventa2'];
 
             <div class="labels-container1">
                 <label class="total1">
-                    <h4>Total : Bs.
+                    <h4>Total Vendido: Bs.
                         <?php echo $suma_subtotal; ?>
                     </h4>
                     </label>
                     <label class="cantidad1">
-                        <h4>Cantidad: #
+                        <h4>Productos vendidos:
                             <?php echo $suma_cantidad ; ?>
                         </h4>
                         </label>
