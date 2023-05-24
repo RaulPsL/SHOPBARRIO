@@ -22,7 +22,7 @@
                       <input type="hidden" name="id" value="<?php echo $valor['ID_PROVEEDOR']; ?>">
                         <div class="container-input">
                           <label for="nombreproveedor">Nombre del proveedor</label>
-                          <input type="text" name="nombre_proveedor" id="nombreproveedor" maxlength="15" value="<?php echo $valor['NOMBRE_PROVEEDOR']; ?>">
+                          <input type="text" name="nombre_proveedor" id="nombreproveedor" maxlength="20" value="<?php echo $valor['NOMBRE_PROVEEDOR']; ?>">
                           <div class="error"></div>
                         </div>
                         <div class="container-input">
@@ -42,16 +42,16 @@
                         </div>
                         <div class="container-input">
                           <label for="descripcion">Descripción</label>
-                          <textarea class="descripcion" name="descripcion" id="descripcion" cols="120" rows="4" maxlength="60"  ><?php echo $valor['DESCRIPCION_PROVEEDOR']; ?> </textarea>
+                          <textarea class="descripcion" name="descripcion" id="descripcion" cols="50" rows="2" maxlength="60"  ><?php echo $valor['DESCRIPCION_PROVEEDOR']; ?> </textarea>
                            <div class="error"></div>
                         </div>
                         <div class="seccion-botones">
                           <a href="mostrar_proveedores">Cancelar Cambios</a>
-                          <button class="registrarbutton" type="submit" name="enviar">GuardarCambios</button>
+                          <button class="registrarbutton" type="submit" name="enviar">Guardar Cambios</button>
                         </div>
                     </div>
                     <div class="der">
-                      <img class="imagenusuario" src="src/miauto.png" alt="">
+                    <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_eop7ymay.json"  background="transparent"  speed="1"  style="width: 500px; height: ;"  loop  autoplay></lottie-player>
                     </div>
                   </div>
                 </section>
