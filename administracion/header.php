@@ -9,7 +9,10 @@ function myheader($titulo){
         </div>
         <div class="header-usuario">
             <img src="src/icon-avatar.svg">
-            <p><?php echo $usuario[0] . " " . $usuario[1]; ?></p>
+            <div class="usuario-sesion">
+                <p><?php echo $usuario[0]; ?></p>
+                <a href="logout">Cerrar Sesión</a>
+            </div>
         </div>
     </div>
 <?php
